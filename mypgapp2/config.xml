@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.projekssistematik.com.my.mygpapp2” version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.projekssistematik.com.my.mygpapp2” version=“1.0.1” xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Hello World</name>
     <description>
         Hello World sample application that responds to the deviceready event.
@@ -69,7 +69,7 @@
     <gap:splash gap:platform="winphone" src="www/res/screen/windows-phone/screen-portrait.jpg" />
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
-    <string>100</string>
+    <string>101</string>
     </gap:config-file>
 
 
