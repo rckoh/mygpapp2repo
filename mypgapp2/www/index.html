@@ -28,29 +28,22 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
-        <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
-            function onLoad()
-             {
-                  document.addEventListener("deviceready", onDeviceReady, true);
-             }
+            // Wait for Cordova to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
 
-             function onDeviceReady()
-             {
-                 alert("ppdb");
-                 var db = window.openDatabase("test", "1.0", "Test DB", 10000000);
-                 db.transaction(populateDB, errorCB, successCB);
-                   //navigator.notification.alert("PhoneGap is working");
-             }
-
-             function callAnothePage()
-             {
-                alert("checking");
-                window.location = "spec.html";
-             }
+            // Cordova is ready
+            //
+            function onDeviceReady() {
+                var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+                db.transaction(populateDB, errorCB, successCB);
+            }
             
+            // Populate the database 
+            //
             function populateDB(tx) {
-                alert("ppdb");
                  tx.executeSql('DROP TABLE IF EXISTS DEMO');
                  tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
                  tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
@@ -67,20 +60,12 @@
             //
             function successCB() {
                 alert("success!");
-                var db = window.openDatabase("test", "1.0", "Test DB", 10000000);
-                db.transaction(queryDB, errorCB);
             }
             
-            function queryDB(tx) {
-                tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+            function callAnothePage()
+            {
+                window.location = "spec.html";
             }
-            
-            function querySuccess(tx, results) {
-                var len = results.rows.length;
-                $("#listCollege").append("<li><a href=''>"+len+"</a></li>");
-            }
-
-
         </script>
     </head>
     <body>
@@ -98,7 +83,7 @@
             </div>
             <div>
                 <br>
-                <ul id="listCollege" data-role="listview"><li>item1</li></ul>
+                <ul id="listCollege" data-role="listview"></ul>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
