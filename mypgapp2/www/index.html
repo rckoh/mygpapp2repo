@@ -60,11 +60,25 @@
             //
             function successCB() {
                 alert("success!");
+                var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
+                db.transaction(queryDB, errorCB);
             }
             
             function callAnothePage()
             {
                 window.location = "spec.html";
+            }
+            
+            function queryDB(tx) {
+                tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+            }
+
+            function querySuccess(tx, results) {
+                var len = results.rows.length;
+                console.log("DEMO table: " + len + " rows found.");
+                for (var i=0; i<len; i++){
+                    console.log("Row = " + i + " ID = " + results.rows.item(i).id + " Data =  " + results.rows.item(i).data);
+                }
             }
         </script>
     </head>
