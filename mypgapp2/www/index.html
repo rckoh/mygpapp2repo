@@ -33,13 +33,14 @@
             // Wait for Cordova to load
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             // Cordova is ready
             //
             
+            var db;
             
             function onDeviceReady() {
                 alert("device ready");  
+                db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
                 //db.transaction(populateDB, errorCB, successCB);
             }
             
@@ -49,17 +50,9 @@
             }
             
             function insertName(tx) {
-                var name=$("#name").val();
+                var name=document.getElementById("name");
                  tx.executeSql('CREATE TABLE IF NOT EXISTS profile (id unique, name, age)');
-                 tx.executeSql('INSERT INTO profile (id, name, age) VALUES (1, "'name'", 10)');
-            }
-            // Populate the database 
-            //
-            function populateDB(tx) {
-                 tx.executeSql('DROP TABLE IF EXISTS DEMO');
-                 tx.executeSql('CREATE TABLE IF NOT EXISTS DEMO (id unique, data)');
-                 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (1, "First row")');
-                 tx.executeSql('INSERT INTO DEMO (id, data) VALUES (2, "Second row")');
+                 tx.executeSql('INSERT INTO profile (id, name, age) VALUES (1, "'+name+'", 10)');
             }
 
             // Transaction error callback
@@ -72,22 +65,25 @@
             //
             function successCB() {
                 alert("success!");
-                var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-                db.transaction(queryDB, errorCB);
             }
             
             function callAnothePage()
             {
                 window.location = "spec.html";
             }
+
+            //get data from db
+            function getid(){
+                db.transaction(queryDB, errorCB, successCB);
+            }
             
             function queryDB(tx) {
-                tx.executeSql('SELECT * FROM DEMO', [], querySuccess, errorCB);
+                tx.executeSql('SELECT max(id) as id FROM profile', [], querySuccess, errorCB);
             }
-
+            
             function querySuccess(tx, results) {
                 var len = results.rows.length;
-                alert("length:"+len);
+                alert("maxid: "+results.rows.item(0).id);
             }
         </script>
     </head>
@@ -102,7 +98,8 @@
                 <br>
                 <input type="text" id="name"/>
                 <button onclick="addName()">Add name</button>
-                <button onclick="callAnothePage()">Next Page</button>
+                <button onclick="getid()">Next Page</button>
+                <button onclick="callAnothePage()">Get ID</button>
             </div>
             <div>
                 <br>
