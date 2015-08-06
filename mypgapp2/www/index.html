@@ -33,14 +33,26 @@
             // Wait for Cordova to load
             //
             document.addEventListener("deviceready", onDeviceReady, false);
-
+            var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
             // Cordova is ready
             //
+            
+            
             function onDeviceReady() {
-                var db = window.openDatabase("Database", "1.0", "Cordova Demo", 200000);
-                db.transaction(populateDB, errorCB, successCB);
+                alert("device ready");  
+                //db.transaction(populateDB, errorCB, successCB);
             }
             
+            function addName()
+            {
+                db.transaction(insertName, errorCB, successCB);
+            }
+            
+            function insertName(tx) {
+                var name=$("#name").val();
+                 tx.executeSql('CREATE TABLE IF NOT EXISTS profile (id unique, name, age)');
+                 tx.executeSql('INSERT INTO profile (id, name, age) VALUES (1, "'name'", 10)');
+            }
             // Populate the database 
             //
             function populateDB(tx) {
@@ -89,7 +101,7 @@
             <div>
                 <br>
                 <input type="text" id="name"/>
-                <button onclick="populateDB()">Add name</button>
+                <button onclick="addName()">Add name</button>
                 <button onclick="callAnothePage()">Next Page</button>
             </div>
             <div>
