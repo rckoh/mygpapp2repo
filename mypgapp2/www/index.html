@@ -28,7 +28,6 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
-         <script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
         <script type="text/javascript" charset="utf-8">
             // Wait for Cordova to load
             //
@@ -74,11 +73,11 @@
 
             //get data from db
             function getid(){
-                db.transaction(queryDB, errorCB, successCB);
+                db.transaction(queryDB, errorCB);
             }
             
             function queryDB(tx) {
-                tx.executeSql('SELECT max(id) as id FROM profile', [], querySuccess, errorCB);
+                tx.executeSql('SELECT id FROM profile', [], querySuccess, errorCB);
             }
             
             function querySuccess(tx, results) {
