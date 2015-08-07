@@ -21,6 +21,7 @@ body {
     padding:0px;
     text-transform:uppercase;
     width:100%;
+    padding-top:30px;
 }
 .pages h3 {
 	font-size: 20px;
@@ -95,7 +96,7 @@ body {
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     .app {
         background-position:left center;
-        padding:50px 0px 0px 0px;   padding-top + padding-bottom + text area = image height */ */
+        padding:0px 0px 0px 0px;   padding-top + padding-bottom + text area = image height */ */
         margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
                                       /* offset horizontal: half of image width and text area width */
     }
