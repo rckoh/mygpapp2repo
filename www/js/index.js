@@ -79,3 +79,13 @@ function fbLogin(){
     
 }
 
+function FBShowDialog(promolink) { 
+                facebookConnectPlugin.showDialog( {
+                            method: "share",
+                            href: promolink,
+                        }, 
+                    function (response) {//do something when share success},
+                    function (response) {//do something when share is failed});
+}
+
+
