@@ -45,10 +45,99 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+		alert("deviceready");
+		push.initPushNotificationRegister();
     }
 };
 
+//Push notification
+var push={
+
+	initPushNotificationRegister: function(){
+        var pushNotification = window.plugins.pushNotification;
+
+
+        if ( device.platform == 'android' || device.platform == 'Android'){
+            pushNotification.register(push.successHandler, push.errorHandler,{"senderID":"165573687429","ecb":"push.onNotificationGCM"});
+        } 
+        else {
+            pushNotification.register(push.tokenHandler,push.errorHandler,{"badge":"true","sound":"true","alert":"true","ecb":"push.onNotificationAPN"});
+        }
+
+    },
+
+// result contains any message sent from the plugin call
+    successHandler: function(result) {
+        alert('Callback Success! Result = '+result);
+    },
+
+    errorHandler:function(error) {
+        alert("error class:"+error);
+    },
+
+//Callback from GCM-----------------------------------------
+	onNotificationGCM: function(e) {
+        switch( e.event )
+        {
+            case 'registered':
+//                $("#redidtxtareas").val(e.regid);
+                if ( e.regid.length > 0 )
+                {
+					alert("Registrationid"+ e.regid);
+                }
+            break;
+
+            case 'message':
+              // this is the actual push notification. its format depends on the data model from the push server
+               alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+            break;
+
+            case 'error':
+              alert('GCM error = '+e.msg);
+            break;
+
+            default:
+              alert('An unknown GCM event has occurred');
+              break;
+        }
+    },
+
+//Callback for APNS------------------------------------------------
+	tokenHandler: function(result) {
+        // Your iOS push server needs to know the token before it can push to this device
+        // here is where you might want to send it the token for later use.
+        dbmanager.checkFirstRun(function(returnData){
+            if(returnData.rows.length==0){
+                alert("RegistrationID"+result);
+            }    
+        });
+    },
+
+	onNotificationAPN: function(event) {
+        if ( event.alert )
+        {
+            navigator.notification.alert(event.alert);
+        }
+
+        if ( event.sound )
+        {
+            var snd = new Media(event.sound);
+            snd.play();
+        }
+
+        if ( event.badge )
+        {
+            pushNotification.setApplicationIconBadgeNumber(successHandler, errorHandler, event.badge);
+        }
+    }
+};
+
+
+
+
+
 function fbLogin(){
+	alert("sa");
     var permission=["public_profile", "email"];
     var fbLoginSuccess = function (userData) {
 //       alert("UserInfo: " + JSON.stringify(userData));
@@ -80,7 +169,8 @@ function fbLogin(){
 }
 
 function FBShowDialog(promolink) { 
-alert("as");
+alert(promolink);
+
                 facebookConnectPlugin.showDialog( {
                             method: "share",
                             href: promolink,
@@ -92,5 +182,3 @@ alert("as");
 					//do something when share is failed
 					});
 }
-
-

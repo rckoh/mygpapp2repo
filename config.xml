@@ -46,7 +46,7 @@
 		<param name="APP_ID" value="521613448006826" />
 		<param name="APP_NAME" value="myTed" />
 	</gap:plugin>
-
+	<gap:plugin name="com.phonegap.plugins.PushPlugin"/>
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="www/res/icon/android/icon-48-mdpi.png" />
