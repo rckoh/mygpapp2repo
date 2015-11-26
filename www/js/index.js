@@ -58,7 +58,7 @@ function fbLogin(){
 
     facebookConnectPlugin.login(permission, 
                                 fbLoginSuccess, 
-                                function (error) { alert("fail login with fb " + JSON.Stringify(error))}
+                                function (error) { alert("fail login with fb " + JSON.stringify(error))}
                                );
 }
 
