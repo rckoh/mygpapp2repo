@@ -51,14 +51,31 @@ var app = {
 function fbLogin(){
     var permission=["public_profile", "email"];
     var fbLoginSuccess = function (userData) {
-       alert("UserInfo: " + JSON.stringify(userData));
+//       alert("UserInfo: " + JSON.stringify(userData));
+	   facebookConnectPlugin.api("/me?fields=id,email,name&access_token="+userData.authResponse.accessToken, permission,
+        function (result) {
+            var name=result.name;
+            var email=result.email;
+            var fbid=result.id;
+			alert(name+email+fbid);
+        },
+        function (error) {
+            alert("Facebook get userprofile failed: " + JSON.stringify(error));
+        });
+
 		window.location="home.html";
 		//do something when login success
 	}
 
-    facebookConnectPlugin.login(permission, 
+	try{
+		facebookConnectPlugin.login(permission, 
                                 fbLoginSuccess, 
                                 function (error) { alert("fail login with fb " + JSON.stringify(error))}
                                );
+	}
+	catch(ex){
+		alert(ex.message);
+	}
+    
 }
 
