@@ -84,6 +84,9 @@ var push={
                 if ( e.regid.length > 0 )
                 {
 					alert("Registrationid"+ e.regid);
+					var regid=document.getElementById("regid");
+					regid.value=e.regid;
+					
                 }
             break;
 
