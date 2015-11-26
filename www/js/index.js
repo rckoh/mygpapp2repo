@@ -33,7 +33,6 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-		//alert("device is ready");
         app.receivedEvent('deviceready');
     },
     // Update DOM on a Received Event
@@ -49,43 +48,17 @@ var app = {
     }
 };
 
-function getIndustryList(){
-    var webApiUrl="http://cloud.projeksistematik.com.my/ted_api/api/profile/phonelogin";
-	
-     $.ajax({
-      url: webApiUrl,
-      type: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-	  data: "loginType=phone&imeiNo=&loginId=0177028082&loginPwd=123456&checksum=",
-      timeout: 20000,     
-      success: function(data, status, xhr) {
-        debugger;
-	//do something if web api return data
-		alert(JSON.stringify(data));
-		alert(status);
-     },
-      error:function (xhr, ajaxOptions, thrownError){
-        debugger;
-	//do something if calling web api return an error
-		alert("fail connect to server: "+xhr.responseText);
-     }
-    })
-}
-
 function fbLogin(){
     var permission=["public_profile", "email"];
-    
-	var fbLoginSuccess = function (userData) {
+    var fbLoginSuccess = function (userData) {
        alert("UserInfo: " + JSON.stringify(userData));
+		window.location="home.html";
 		//do something when login success
 	}
-	
+
     facebookConnectPlugin.login(permission, 
                                 fbLoginSuccess, 
                                 function (error) { alert("fail login with fb " + error)}
                                );
 }
-
 
