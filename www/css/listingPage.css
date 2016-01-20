@@ -1,0 +1,765 @@
+@media(min-width:320px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* subheader Style*/
+.subheaderblack{
+	position: absolute;
+	top:6%;
+    background-color:black;
+    text-align:justify;
+    color: white;
+    height: 6%;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.subBtn1{
+	width:31%;
+	position:absolute;
+	height:100%;
+}
+
+.subBtn2{
+	width:31%;
+	position:absolute;
+	height:100%;
+	left:34.5%;
+}
+
+.subSeperator1{
+	width:3.5%;
+	position:absolute;
+	height:100%;
+	left:31%;
+	vertical-align:middle;
+}
+
+.subSeperator1 button{
+	position:absolute;
+	height:100%;
+	line-height:100%;
+	vertical-align:middle;
+}
+
+
+.subheaderbutton{
+    background-color: transparent;
+    border: none;
+    color: #bdbdbd;
+    width: 100%;
+    height: 100%;
+	line-height:100%;
+    font-family: "Roboto-Medium";
+    font-size: 4vw;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+.selectedItem{
+    position: absolute;
+    background-color: #df3d2c;
+    width: 32.75%;
+    height: 2px;
+    z-index: 88;
+    /* top:12%; */
+/*    margin: 0px 0.5% 0px 0px;*/
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+	bottom:0px;
+}
+
+.subheaderFilter{
+    position: absolute;
+    background-color: transparent;
+    width: 12%;
+    height: 100%;
+    z-index: 88;
+    right: 10px;
+}
+
+.filterBtnCls{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    z-index: 88;
+}
+
+.filterBtnImg{
+    height: 70%;
+    width: AUTO;
+    border: none;
+    background-color: transparent;
+}
+
+/* subheader Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+    width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:12%;
+    
+}
+
+.pageone{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+     -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+
+.pagetwo{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 1 list view Style */
+.wrapperLVM{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+/*    bottom: 0%;*/
+    overflow:auto;
+}
+
+.scrollulLVM{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    max-width: 100%;
+    text-align:left;
+}
+ 
+.scrollliLVM {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px dotted #df2d3c;  
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.scrollliLVM:hover {
+    background-color: white;
+}
+
+.scroll-contentLVM {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgLVM{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.listviewlblLVM{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+
+.listviewitemtitleLVM{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsLVM{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.listviewitemseperatorLVM{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeLVM{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*Page 1 list view Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 2 List view Style */
+.wrapperLVMPG2{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+/*    bottom: 0%;*/
+    overflow:auto;
+}
+
+.scrollulLVMPG2{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliLVMPG2 {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px dotted #df2d3c;  
+    overflow: hidden;
+}
+
+.scrollliLVMPG2:hover {
+    background-color: white;
+}
+
+.scroll-contentLVMPG2 {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgLVMPG2{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.listviewlblLVMPG2{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleLVMPG2{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsLVMPG2{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;  
+}
+
+.listviewitemseperatorLVMPG2{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeLVMPG2{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*Page 2 list view Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+}
+
+
+@media(min-width:600px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* subheader Style*/
+.subheaderblack{
+	position: absolute;
+	top:6%;
+    background-color:black;
+    text-align:justify;
+    color: white;
+    height: 6%;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.subBtn1{
+	width:31%;
+	position:absolute;
+	height:100%;
+}
+
+.subBtn2{
+	width:31%;
+	position:absolute;
+	height:100%;
+	left:34.5%;
+}
+
+.subSeperator1{
+	width:3.5%;
+	position:absolute;
+	height:100%;
+	left:31%;
+	vertical-align:middle;
+}
+
+.subSeperator1 button{
+	position:absolute;
+	height:100%;
+	line-height:100%;
+	vertical-align:middle;
+}
+
+
+.subheaderbutton{
+    background-color: transparent;
+    border: none;
+    color: #bdbdbd;
+    width: 100%;
+    height: 100%;
+	line-height:100%;
+    font-family: "Roboto-Medium";
+    font-size: 4vw;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+.selectedItem{
+    position: absolute;
+    background-color: #df3d2c;
+    width: 32.75%;
+    height: 2px;
+    z-index: 88;
+    /* top:12%; */
+/*    margin: 0px 0.5% 0px 0px;*/
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+	bottom:0px;
+}
+
+.subheaderFilter{
+    position: absolute;
+    background-color: transparent;
+    width: 12%;
+    height: 100%;
+    z-index: 88;
+    right: 10px;
+}
+
+.filterBtnCls{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    z-index: 88;
+}
+
+.filterBtnImg{
+    height: 70%;
+    width: AUTO;
+    border: none;
+    background-color: transparent;
+}
+
+/* subheader Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+    width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:12%;
+    
+}
+
+.pageone{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+     -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+
+.pagetwo{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 1 list view Style */
+.wrapperLVM{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+/*    bottom: 0%;*/
+    overflow:auto;
+}
+
+.scrollulLVM{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    max-width: 100%;
+    text-align:left;
+}
+ 
+.scrollliLVM {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px dotted #df2d3c;  
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.scrollliLVM:hover {
+    background-color: white;
+}
+
+.scroll-contentLVM {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgLVM{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.listviewlblLVM{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+
+.listviewitemtitleLVM{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsLVM{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.listviewitemseperatorLVM{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeLVM{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*Page 1 list view Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 2 List view Style */
+.wrapperLVMPG2{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+/*    bottom: 0%;*/
+    overflow:auto;
+}
+
+.scrollulLVMPG2{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliLVMPG2 {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px dotted #df2d3c;  
+    overflow: hidden;
+}
+
+.scrollliLVMPG2:hover {
+    background-color: white;
+}
+
+.scroll-contentLVMPG2 {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgLVMPG2{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.listviewlblLVMPG2{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleLVMPG2{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsLVMPG2{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;  
+}
+
+.listviewitemseperatorLVMPG2{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeLVMPG2{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*Page 2 list view Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+}

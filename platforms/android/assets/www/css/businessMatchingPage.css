@@ -1,0 +1,1646 @@
+@media(min-width:320px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* subheader Style*/
+.subheaderblack{
+	position: absolute;
+	top:6%;
+    background-color:black;
+    text-align:justify;
+    color: white;
+    height: 6%;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.subBtn1{
+	width:31%;
+	position:absolute;
+	height:100%;
+}
+
+.subBtn2{
+	width:31%;
+	position:absolute;
+	height:100%;
+	left:34.5%;
+}
+
+
+.subSeperator1{
+	width:3.5%;
+	position:absolute;
+	height:100%;
+	left:31%;
+	vertical-align:middle;
+}
+
+.subSeperator1 button{
+	position:absolute;
+	height:100%;
+	line-height:100%;
+	vertical-align:middle;
+}
+
+
+.subheaderbutton{
+    background-color: transparent;
+    border: none;
+    color: #bdbdbd;
+    width: 100%;
+    height: 100%;
+	line-height:100%;
+    font-family: "Roboto-Medium";
+    font-size: 4vw;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+.selectedItem{
+    position: absolute;
+    background-color: #df2d3c;
+    width: 32.75%;
+    height: 2px;
+    z-index: 88;
+    /* top:12%; */
+/*    margin: 0px 0.5% 0px 0px;*/
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+	bottom:0px;
+}
+
+.subheaderFilter{
+    position: absolute;
+    background-color: transparent;
+    width: 12%;
+    height: 100%;
+    z-index: 87;
+    right: 10px;
+}
+
+.filterBtnCls{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.filterBtnImg{
+    height: 70%;
+    width: auto;
+    border: none;
+    background-color: transparent;
+}
+
+/* subheader Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+    width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:12%;
+}
+
+.pageone{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+
+.pagetwo{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 1 Last view matches Style */
+.headerSpaceLVM{
+    height: 1%;
+}
+
+.headerLVM{
+	position:absolute;
+    font-family: "Roboto-Medium";
+    font-size: 3vw;
+    background-color: #df2d3c;
+    color: white;
+    line-height: 30px;
+    height: 5%;
+	width:100%;
+    text-indent: 10px;
+}
+
+.headerLVM span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.headerLVM img{
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.wrapperLVM{
+    height: 44%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+/*    bottom: 0%;*/
+    overflow:auto;
+    overflow-x:hidden;
+	top:6%;
+}
+
+.scrollulLVM{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliLVM {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px dotted #df2d3c;  
+    overflow: hidden;
+}
+
+.scrollliLVM:hover {
+    background-color: white;
+}
+
+.scroll-contentLVM {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgLVM{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.listviewlblLVM{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleLVM{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsLVM{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.listviewitemseperatorLVM{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeLVM{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*Page 1 last view matches Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 1 listview recommended matches Style*/
+.headerSpaceRM{
+    height: 1%;
+    position: absolute;
+    top: 50%;
+}
+
+.headerRM{
+    font-family: "Roboto-Medium";
+    font-size: 3vw;
+    background-color: #df2d3c;
+    color: white;
+    height: 5%;
+    width: 100%;
+    text-indent: 10px;
+    position: absolute;
+    top: 51%;
+    display: inline-block;
+}
+
+.headerRM span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.headerRM img{
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.wrapperRM{
+    height: 44%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    bottom: 0%;
+    overflow:auto;
+    overflow-x: hidden;
+}
+
+.scrollulRM{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliRM {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px dotted #df2d3c; 
+    overflow: hidden;
+}
+
+.scrollliRM:hover {
+    background-color: white;
+}
+
+.scroll-contentRM {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgRM{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.listviewlblRM{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleRM{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsRM{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.listviewitemseperatorRM{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeRM{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+/*Page 1 listview recommended matches Style  end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 2 Last view matches Style */
+.headerSpaceLVMPG2{
+    height: 1%;
+}
+
+.headerLVMPG2{
+    position:absolute;
+    font-family: "Roboto-Medium";
+    font-size: 3vw;
+    background-color: #46a19a;
+    color: white;
+    line-height: 30px;
+    height: 5%;
+	width:100%;
+    text-indent: 10px;
+}
+
+.wrapperLVMPG2{
+    height: 44%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+/*    bottom: 0%;*/
+    overflow:auto;
+	top:6%;
+}
+
+.scrollulLVMPG2{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliLVMPG2 {
+    padding:0 10px;
+    height:auto;
+    line-height:auto;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+/*    background-color:#fafafa;*/
+    font-size:14px;
+    border-bottom: 1px dotted #333;  
+    overflow: hidden;
+}
+
+.scrollliLVMPG2:hover {
+    background-color: white;
+}
+
+.scroll-contentLVMPG2 {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgLVMPG2{
+/*    line-height: px;*/
+    width: 100px;
+    height: auto;
+/*    border: 1px solid black;*/
+    display: block;
+}
+
+.listviewlblLVMPG2{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleLVMPG2{
+    color: #32978f;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsLVMPG2{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+    
+}
+
+.listviewitemseperatorLVMPG2{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #32978f;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeLVMPG2{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*Page 2 last view matches Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 2 listview recommended matches Style*/
+.headerSpaceRMPG2{
+    height: 1%;
+    position: absolute;
+    top: 50%;
+}
+
+.headerRMPG2{
+    font-family: "Roboto-Medium";
+    font-size: 3vw;
+    background-color: #46a19a;
+    color: white;
+    line-height: 30px;
+    height: 30px;
+    width: 100%;
+    text-indent: 10px;
+    position: absolute;
+    top: 51%;
+}
+
+.wrapperRMPG2{
+    height: 44%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    bottom: 0%;
+    overflow:auto;
+}
+
+.scrollulRMPG2{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliRMPG2 {
+    padding:0 10px;
+    height:auto;
+    line-height:auto;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+/*    background-color:#fafafa;*/
+    font-size:3vw;
+    border-bottom: 1px dotted #333;  
+    overflow: hidden;
+}
+
+.scrollliRMPG2:hover {
+    background-color: white;
+}
+
+.scroll-contentRMPG2 {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgRMPG2{
+/*    line-height: px;*/
+    width: 100px;
+    height: auto;
+/*    border: 1px solid black;*/
+    display: block;
+}
+
+.listviewlblRMPG2{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleRMPG2{
+    color: #32978f;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsRMPG2{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+    
+}
+
+.listviewitemseperatorRMPG2{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #32978f;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeRMPG2{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+/*Page 2 listview recommended matches Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* reply message*/
+.messageDiv{
+    height:100%;
+    width: 100%;
+    position: relative;
+    top:0%;
+    background-color: lightgray;
+    width: 100%;
+    background: URL("../img/login.jpg");
+    background-size: auto auto;
+    background-repeat: no repeat;
+}
+
+.replyMessageInput{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height: 65%;
+    top: 25%;
+    border-radius: 10px;
+    background-color: white;
+    border-color: black;
+    color: #565656;
+    resize: none;
+    min-height: 65%;
+    max-height: 65%;    
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.replyMessageSubject{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height:7%;
+    top: 13%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565656;
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+.btnSend{
+    position: absolute;
+    right: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnClose{
+    position: absolute;
+    left: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnSend img{
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+
+.replyMessageLbl{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 5%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 4vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.messageDivFrame{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: transparent;
+    z-index: 89;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #565656;
+    opacity:  0.4;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #565656;
+   opacity:  0.4;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #565656;
+   opacity:  0.4;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #565656;
+    opacity:  0.4;
+}
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+}
+
+
+@media(min-width:600px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* subheader Style*/
+.subheaderblack{
+	position: absolute;
+	top:6%;
+    background-color:black;
+    text-align:justify;
+    color: white;
+    height: 6%;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.subBtn1{
+	width:31%;
+	position:absolute;
+	height:100%;
+}
+
+.subBtn2{
+	width:31%;
+	position:absolute;
+	height:100%;
+	left:34.5%;
+}
+
+
+.subSeperator1{
+	width:3.5%;
+	position:absolute;
+	height:100%;
+	left:31%;
+	vertical-align:middle;
+}
+
+.subSeperator1 button{
+	position:absolute;
+	height:100%;
+	line-height:100%;
+	vertical-align:middle;
+}
+
+
+.subheaderbutton{
+    background-color: transparent;
+    border: none;
+    color: #bdbdbd;
+    width: 100%;
+    height: 100%;
+	line-height:100%;
+    font-family: "Roboto-Medium";
+    font-size: 4vw;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+
+.selectedItem{
+    position: absolute;
+    background-color: #df2d3c;
+    width: 32.75%;
+    height: 2px;
+    z-index: 88;
+    /* top:12%; */
+/*    margin: 0px 0.5% 0px 0px;*/
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+	bottom:0px;
+}
+
+.subheaderFilter{
+    position: absolute;
+    background-color: transparent;
+    width: 12%;
+    height: 100%;
+    z-index: 87;
+    right: 10px;
+}
+
+.filterBtnCls{
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.filterBtnImg{
+    height: 70%;
+    width: auto;
+    border: none;
+    background-color: transparent;
+}
+
+/* subheader Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+    width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:12%;
+}
+
+.pageone{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+
+.pagetwo{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 2;
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 1 Last view matches Style */
+.headerSpaceLVM{
+    height: 1%;
+}
+
+.headerLVM{
+	position:absolute;
+    font-family: "Roboto-Medium";
+    font-size: 3vw;
+    background-color: #df2d3c;
+    color: white;
+    line-height: 30px;
+    height: 5%;
+	width:100%;
+    text-indent: 10px;
+}
+
+.headerLVM span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.headerLVM img{
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.wrapperLVM{
+    height: 44%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+/*    bottom: 0%;*/
+    overflow:auto;
+    overflow-x:hidden;
+	top:6%;
+}
+
+.scrollulLVM{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliLVM {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px dotted #df2d3c;  
+    overflow: hidden;
+}
+
+.scrollliLVM:hover {
+    background-color: white;
+}
+
+.scroll-contentLVM {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgLVM{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.listviewlblLVM{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleLVM{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsLVM{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.listviewitemseperatorLVM{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeLVM{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*Page 1 last view matches Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 1 listview recommended matches Style*/
+.headerSpaceRM{
+    height: 1%;
+    position: absolute;
+    top: 50%;
+}
+
+.headerRM{
+    font-family: "Roboto-Medium";
+    font-size: 3vw;
+    background-color: #df2d3c;
+    color: white;
+    height: 5%;
+    width: 100%;
+    text-indent: 10px;
+    position: absolute;
+    top: 51%;
+    display: inline-block;
+}
+
+.headerRM span{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.headerRM img{
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.wrapperRM{
+    height: 44%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    bottom: 0%;
+    overflow:auto;
+    overflow-x: hidden;
+}
+
+.scrollulRM{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliRM {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px dotted #df2d3c; 
+    overflow: hidden;
+}
+
+.scrollliRM:hover {
+    background-color: white;
+}
+
+.scroll-contentRM {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgRM{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.listviewlblRM{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleRM{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsRM{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+}
+
+.listviewitemseperatorRM{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeRM{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+/*Page 1 listview recommended matches Style  end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 2 Last view matches Style */
+.headerSpaceLVMPG2{
+    height: 1%;
+}
+
+.headerLVMPG2{
+    position:absolute;
+    font-family: "Roboto-Medium";
+    font-size: 3vw;
+    background-color: #46a19a;
+    color: white;
+    line-height: 30px;
+    height: 5%;
+	width:100%;
+    text-indent: 10px;
+}
+
+.wrapperLVMPG2{
+    height: 44%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+/*    bottom: 0%;*/
+    overflow:auto;
+	top:6%;
+}
+
+.scrollulLVMPG2{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliLVMPG2 {
+    padding:0 10px;
+    height:auto;
+    line-height:auto;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+/*    background-color:#fafafa;*/
+    font-size:14px;
+    border-bottom: 1px dotted #333;  
+    overflow: hidden;
+}
+
+.scrollliLVMPG2:hover {
+    background-color: white;
+}
+
+.scroll-contentLVMPG2 {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgLVMPG2{
+/*    line-height: px;*/
+    width: 100px;
+    height: auto;
+/*    border: 1px solid black;*/
+    display: block;
+}
+
+.listviewlblLVMPG2{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleLVMPG2{
+    color: #32978f;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsLVMPG2{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+    
+}
+
+.listviewitemseperatorLVMPG2{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #32978f;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeLVMPG2{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+/*Page 2 last view matches Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/*Page 2 listview recommended matches Style*/
+.headerSpaceRMPG2{
+    height: 1%;
+    position: absolute;
+    top: 50%;
+}
+
+.headerRMPG2{
+    font-family: "Roboto-Medium";
+    font-size: 3vw;
+    background-color: #46a19a;
+    color: white;
+    line-height: 30px;
+    height: 30px;
+    width: 100%;
+    text-indent: 10px;
+    position: absolute;
+    top: 51%;
+}
+
+.wrapperRMPG2{
+    height: 44%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    bottom: 0%;
+    overflow:auto;
+}
+
+.scrollulRMPG2{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollliRMPG2 {
+    padding:0 10px;
+    height:auto;
+    line-height:auto;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+/*    background-color:#fafafa;*/
+    font-size:3vw;
+    border-bottom: 1px dotted #333;  
+    overflow: hidden;
+}
+
+.scrollliRMPG2:hover {
+    background-color: white;
+}
+
+.scroll-contentRMPG2 {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+.listviewimgRMPG2{
+/*    line-height: px;*/
+    width: 100px;
+    height: auto;
+/*    border: 1px solid black;*/
+    display: block;
+}
+
+.listviewlblRMPG2{
+/*    padding: 10px 10px 10px 0px;*/
+}
+
+.listviewitemtitleRMPG2{
+    color: #32978f;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.5vw;
+    height: auto;
+    max-height: 9vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    text-overflow:clip;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+}
+
+.listviewitemdetailsRMPG2{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+    
+}
+
+.listviewitemseperatorRMPG2{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #32978f;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframeRMPG2{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+/*Page 2 listview recommended matches Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* reply message*/
+.messageDiv{
+    height:100%;
+    width: 100%;
+    position: relative;
+    top:0%;
+    background-color: lightgray;
+    width: 100%;
+    background: URL("../img/login.jpg");
+    background-size: auto auto;
+    background-repeat: no repeat;
+}
+
+.replyMessageInput{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height: 65%;
+    top: 25%;
+    border-radius: 10px;
+    background-color: white;
+    border-color: black;
+    color: #565656;
+    resize: none;
+    min-height: 65%;
+    max-height: 65%;    
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.replyMessageSubject{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height:7%;
+    top: 13%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565656;
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+.btnSend{
+    position: absolute;
+    right: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnClose{
+    position: absolute;
+    left: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnSend img{
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+
+.replyMessageLbl{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 5%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 4vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.messageDivFrame{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: transparent;
+    z-index: 89;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #565656;
+    opacity:  0.4;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #565656;
+   opacity:  0.4;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #565656;
+   opacity:  0.4;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #565656;
+    opacity:  0.4;
+}
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+}

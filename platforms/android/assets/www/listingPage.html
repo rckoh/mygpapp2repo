@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+<!--        <link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.4.5.css"/>-->
+        <title>Home Page</title>
+        <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/listingPage.js"></script>
+        <script type="text/javascript" src="js/webRequest.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/slidemenu.js"></script>
+        <script type="text/javascript" src="js/filterListing.js"></script>
+        <script type="text/javascript">
+            $(document).bind('mobileinit',function(){
+                $.mobile.loadingMessage = false;
+            })
+        </script>  
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/listingPage.css" />
+        <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
+        <link rel="stylesheet" type="text/css" href="css/filter.css" />
+        <script type="text/javascript">
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var menuStatus;
+            //bind swipe event with jquery
+            $(function(){
+                $("#pageBody").on("swipeleft", function(){
+                    pageSwipeLeft();
+                });
+                
+                $("#pageBody").on("swiperight", function(){
+                    pageSwipeRight();
+                });
+            });
+            
+            function onDeviceReady() {
+                
+            }
+
+        </script>
+    </head>
+    <body id="pageBody">
+        <div data-role="app" class="app" id="app">
+            <div class="menuheader">
+                <div class="menuheaderleft">
+                    <button class="buttonbg"><img class="menubutton" src="img/drawer.png"></img></button>
+                </div>
+                <div class="menuheaderright">
+                    <button class="pagetitle">Listings</button>
+                    <button class="pageTitileImgBG" id="pageTitileImgBG" onclick=""><img class="pageTitileImg" src="img/listing.png"></img></button>
+                    <button class="inboxBtn" onclick="goInbox()"><img class="inboxBtnImg" src="img/message.png"></img></button>
+                </div>
+            </div>
+            <div class="menubg">
+                <div class="searchbox">
+                    <script type="text/javascript" src="js/searchBox.js"></script>
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <ul id="slidemenu">
+                        <script type="text/javascript" src="js/slidemenuitem.js"></script>
+                    </ul>    
+                </div>
+                <div class="menufooter">
+                    <img src="img/menufooter-2.png" class="footerimage"/>
+                </div>
+            </div>
+            <div class="filterFrame">
+                <div class="filterbg">
+                    <div class="filterHeader">
+                        Search
+                    </div>
+                    <div class="closeButtonFrame">
+                        <button class="closeButton" id="closeBtn"><img clas="closeButtonImg" src="img/filter-arrow.png"/>                                 </button>
+                    </div>
+                    <div class="filterItem" id="filterItem">
+                    </div>
+                </div>
+            </div>
+            <div class="subheaderblack">
+                <div>
+					<div>
+						<div class="subBtn1">
+							<button class="subheaderbutton" onclick="changepage(1);" id="btnProduct">Product</button>
+						</div>
+						<div class="subSeperator1">
+							 <button class="subheaderbutton">|</button>
+						</div>
+						<div class="subBtn2">
+							<button class="subheaderbutton" onclick="changepage(2);" id="btnServices">Services</button>
+						</div>
+					</div>
+					<div class="subheaderFilter">
+						<button id="filterBtn" class="filterBtnCls"><img src="img/filter.png" class="filterBtnImg"/></button>
+					</div>
+					<div class="selectedItem">
+					</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="pageone">
+                    <div class="wrapperLVM" id="wrapper">
+                        <div class="scroll-contentLVM" id="scroll-content">
+                            <ul class="scrollulLVM" id="scrollul">
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagetwo">
+                    <div class="wrapperLVMPG2" id="wrapper">
+                        <div class="scroll-contentLVMPG2" id="scroll-content">
+                            <ul class="scrollulLVMPG2" id="scrollul">
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script type="text/javascript" src="../plugins/iscroll-master/build/iscroll-lite.js"></script>
+        <script type="text/javascript" src="js/filterItemListing.js"></script>
+        <script type="text/javascript">
+
+        var theScroll;
+        function scroll() {
+            theScroll = new iScroll('wrapper');
+        }
+        </script>
+        <script type="text/javascript">
+            filterListing.initListingFilter();
+            app.initialize();
+            dbmanager.initdb();
+            $(document).ready(function(){
+                slideMenu.initSlideMenu();
+                //initListingProdList();
+                initInboxButton();
+                inboxMessage.checkNewMessageNumber();
+                
+                // Set togglebutton to false default
+                var listingpagenumber = window.localStorage.getItem("listingpagenumber");
+                
+                if (listingpagenumber==null) 
+                    window.localStorage.setItem("listingpagenumber", '1');
+                
+                listingpagenumber=window.localStorage.getItem("listingpagenumber");
+                if(listingpagenumber=='1')
+                    changepage(1);
+                else if(listingpagenumber=='2')
+                    changepage(2);
+            });
+        </script>
+    </body>
+</html>

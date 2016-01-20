@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>43E17F74-7DA4-4620-9B29-76BB1917E2A8</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MDeC eSolution</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5D9AEAF7FDB3D8CF4E99EF6676032C7A4CF6A9FC</key>
+		<string>https://github.com/rckoh/CEDMXX.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>platforms/ios/MDeC eSolution.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5D9AEAF7FDB3D8CF4E99EF6676032C7A4CF6A9FC</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rckoh/CEDMXX.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5D9AEAF7FDB3D8CF4E99EF6676032C7A4CF6A9FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5D9AEAF7FDB3D8CF4E99EF6676032C7A4CF6A9FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>MDEC</string>
+		</dict>
+	</array>
+</dict>
+</plist>

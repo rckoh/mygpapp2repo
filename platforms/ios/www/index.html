@@ -25,29 +25,297 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-		<script type="text/javascript" src="facebookConnectPlugin.js"></script>
-		<script type="text/javascript" src="PushNotification.js"></script>
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-				<button onclick="fbLogin();">FB login</button>
-				<button onclick="FBShowDialog('http://docs.build.phonegap.com/en_US/signing_signing-android.md.html#Android%20Signing');">FB Share</button>
-				<input type="text" id="regid"></input>
-            </div>
-        </div>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+<!--        <link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.4.5.css"/>-->
+        <title>Home Page</title>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/webRequest.js"></script>
+        <script type="text/javascript" src="js/queryStr.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="facebookConnectPlugin.js"></script>
+        <script type="text/javascript" src="PushNotification.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.min.js"></script>
         <script type="text/javascript">
-			
+            $(document).bind('mobileinit',function(){
+                $.mobile.loadingMessage = false;
+            })
+        </script>  
+        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+<!--        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
+        <script type="text/javascript" src="js/slidemenu.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var menuStatus;
+            
+            //bind swipe event with jquery
+            $(function(){
+	
+                $("#pageBody").on("swipeleft", function(){
+                    pageSwipeLeft();
+                });
+
+                $("body").on("swiperight", function(){
+                    pageSwipeRight();
+                });	
+
+            });
+
+            function onDeviceReady() {
+                document.addEventListener("backbutton", onBackKeyDown, false);
+                
+                if(navigator.network.connection.type == Connection.NONE)
+                    navigator.notification.alert("No internet connection.", function(){}, "MDeC eSolution", "Ok");
+                
+            }
+            
+            function onBackKeyDown(e) {
+              e.preventDefault();
+              navigator.notification.confirm("Are you sure you want to exit ?", onConfirm, "Confirmation", "Yes,No");     
+            }
+            
+            function onConfirm(button) {
+                if(button==2){//If User selected No, then we just do nothing
+                    return;
+                }else{
+                    navigator.app.exitApp();// Otherwise we quit the app.
+                }
+            }
+            
+            function startslideshow(data){
+                window.setInterval(slideshow(data), 5000);
+            }
+            
+        </script>
+        <script type="text/javascript" src="js/loginnavigate.js"></script>
+        
+    </head>
+<!--    <body onload="startslideshow();getFeaturedList();getLatestPostList();getAnnouncementList();" id="pageBody" class="appBody">-->
+    <body id="pageBody" class="appBody">
+        <div data-role="app" class="app" id="app">
+            <div class="menuheader">
+                <div class="menuheaderleft">
+                    <button class="buttonbg"><img class="menubutton" src="img/drawer.png"></img></button>
+                </div>
+                <div class="menuheaderright">
+                     <button class="pagetitle">Trending</button>
+                    <button class="pageTitileImgBG" id="pageTitileImgBG" onclick=""><img class="pageTitileImg" src="img/trending-w.png"></img></button>
+                    <button class="inboxBtn" onclick="goInbox()"><img class="inboxBtnImg" src="img/message.png"></img></button> 
+                </div>
+<!--
+                <table class="menuheadertable">
+                    <tr>
+                        <td style="width:40%">
+                            <button class="buttonbg"><img class="menubutton" src="img/drawer.png"></img></button>
+                        </td>
+                        <td style="text-align:right;width:60%">
+
+                            <button class="buttonsharebg" onclick="showDialogFB()"><img class="sharebutton" src="img/drawer.png"></img></button>
+                            <button class="buttonsharebg" onclick="sharetoFV()"><img class="sharebutton" src="img/drawer.png"></img></button>
+                            <button class="inboxBtn" onclick="goInbox()"><img class="inboxBtnImg" src="img/message.png"></img></button>
+
+                            <button class="pageTitileImgBG" onclick=""><img class="pageTitileImg" src="img/trending.png"></img></button>
+                            <button class="pagetitle">Trending</button>
+                        </td>
+                    </tr>
+                </table>
+-->
+            </div>
+            <div class="menubg">
+                <div class="searchbox">
+                    <script type="text/javascript" src="js/searchBox.js"></script>
+<!--
+                    <input type="text" class="searchbox" placeholder="search products and services" id="searchTextBox">
+                        <button class="searchBoxBtn" onclick="clearSearch()"><img src="img/search.png" class="searchBoxBtnImg"/></button>
+                    </input>
+-->
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <ul id="slidemenu">
+                        <script type="text/javascript" src="js/slidemenuitem.js"></script>
+                    </ul>    
+                </div>
+                <div class="menufooter">
+                    <img src="img/menufooter-2.png" class="footerimage"/>
+                </div>
+            </div>
+            <div class="subheaderblack">
+                <div>
+					<div class="subBtn1">
+						<button class="subheaderbutton" onclick="changepage(1);" id="btnFeatured">Featured</button>
+					</div>
+					<div class="subSeperator1">
+                         <button class="subheaderbutton">|</button>
+                    </div>
+                    <div class="subBtn2">
+                        <button class="subheaderbutton" onclick="changepage(2);" id="btnLatestPost">Latest Post</button>
+                    </div>
+                     <div class="subSeperator2">
+                        <button class="subheaderbutton">|</button>
+                    </div>
+                    <div class="subBtn3">
+                        <button class="subheaderbutton" onclick="changepage(3);" id="btnAnnouncement">Announcements</button>
+					</div>
+						<div class="selectedItem">
+					</div> 
+                </div>
+            </div>
+<!--            <div class="redidtxt"><textarea id="redidtxtareas"></textarea></div>-->
+            <div class="content">
+                <div class="pageone">
+                    <div class="imagecontent">
+                        <img src="img/loading.gif" class="slideshowimage" id="slideshowimage"></img>
+                        <div class="slideshowimagenamediv">
+<!--
+                            <h1 class="slideshowitemtitle">Some TitleSomeTitleomeTitleomeTitle omeTitleomeTitleomeTitle</h1>
+                                <p class="slideshowitemseperator">&nbsp;</p>
+                                <p class="slideshowitemdetails">We developed enterprise level office PABX that cater for everytelepr</p>
+-->
+                            <div>
+<!--                            <p class="userSummary"><img src="img/view.png" class="userSummaryIcon"/>&nbsp;13&nbsp;<img src="img/fav.png" class="userSummaryIcon"/>&nbsp;13&nbsp;<img src="img/share.png" class="userSummaryIcon"/>&nbsp;123&nbsp;&nbsp;</p>-->
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="wrapper" id="wrapper">
+                        <div class="scroll-content" id="scroll-content">
+                            <ul class="scrollul" id="scrollul">
+                                <!-- item will be added through ajax -->
+                            </ul>
+                            <br>
+                        </div>
+                    </div> 
+                </div>
+                <div class="pagetwo">
+                    <div class="imagecontentpage2">
+                        <img src="img/loading.gif" class="slideshowimagepage2" id="slideshowimagepage2"></img>
+                        <div class="slideshowimagenamedivpage2">
+<!--
+                            <h1 class="slideshowitemtitlepage2">Some Title</h1>
+                                <p class="slideshowitemseperatorpage2">&nbsp;</p>
+                                <p class="slideshowitemdetailspage2">We developed enterprise level office PABX that cater for everyteleprothy needs.</p>
+-->
+                            <div>
+<!--                            <p class="userSummarypage2"><img src="img/view.png" class="userSummaryIconpage2"/>&nbsp;13&nbsp;<img src="img/fav.png" class="userSummaryIconpage2"/>&nbsp;13&nbsp;<img src="img/share.png" class="userSummaryIconpage2"/>&nbsp;123&nbsp;&nbsp;</p>-->
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="wrapperPage2" id="wrapper">
+                        <div class="scroll-contentPage2" id="scroll-content">
+                            <ul class="scrollulPage2" id="scrollul">
+<!--
+                                <li class="scrollliPage2" onclick="itemOnClickService();">
+                                    <table class="listviewitemframePage2">
+                                        <tr>
+                                            <td style="width:20%"><img class="listviewimgPage2" src="http://cdn.playbuzz.com/cdn/fdbf1197-18af-43df-a5b1-76d180475700/49081b85-5614-4368-9103-71d9f0651322.jpg">
+                                            </td>
+                                            <td>
+                                                <h1 class="listviewitemtitlePage2">Some Title</h1>
+                                                <p class="listviewitemseperatorPage2">&nbsp;</p>
+                                                <p class="listviewitemdetailsPage2">We developed enterprise level office PABX that cater for everyteleprothy needs.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+-->
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagethree">
+                    <div class="imagecontentpage3">
+                        <img src="img/loading.gif" class="slideshowimagepage3" id="slideshowimagepage3"></img>
+                        <div class="slideshowimagenamedivpage3">
+<!--
+                            <h1 class="slideshowitemtitlepage3">Some Title</h1>
+                                <p class="slideshowitemseperatorpage3">&nbsp;</p>
+                                <p class="slideshowitemdetailspage3">We developed enterprise level office PABX that cater for everyteleprothy needs.</p>
+-->
+                            <div>
+<!--                            <p class="userSummary"><img src="img/view.png" class="userSummaryIcon"/>&nbsp;13&nbsp;<img src="img/fav.png" class="userSummaryIcon"/>&nbsp;13&nbsp;<img src="img/share.png" class="userSummaryIcon"/>&nbsp;123&nbsp;&nbsp;</p>-->
+                        </div>
+                        </div>
+                        
+                    </div>
+                    <div class="wrapperPage3" id="wrapper">
+                        <div class="scroll-contentPage3" id="scroll-content">
+                            <ul class="scrollulPage3" id="scrollul">
+<!--
+                                <li class="scrollliPage3">
+                                    <table class="listviewitemframePage3">
+                                        <tr>
+                                            <td style="width:20%"><img class="listviewimgPage3" src="http://cdn.playbuzz.com/cdn/fdbf1197-18af-43df-a5b1-76d180475700/49081b85-5614-4368-9103-71d9f0651322.jpg">
+                                            </td>
+                                            <td>
+                                                <h1 class="listviewitemtitlePage3">Some Title</h1>
+                                                <p class="listviewitemseperatorPage3">&nbsp;</p>
+                                                <p class="listviewitemdetailsPage3">We developed enterprise level office PABX that cater for everyteleprothy needs.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+-->
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../plugins/iscroll-master/build/iscroll-lite.js"></script>
+ 
+        <script type="text/javascript">
+
+        var theScroll;
+        function scroll() {
+            theScroll = new iScroll('wrapper');
+        }
+        </script>
+        <script type="text/javascript">
             app.initialize();
-			
+            dbmanager.initdb();
+            dbmanager.createTable();
+            $(document).ready(
+                function(){
+                    var dmzProcess=getDMZKey();                    
+                    
+                    initsubmenustyle();
+                    var frompage=getUrlParameter("fromPage");
+                    if(frompage=="announcement"){
+                        changepage(3);
+                    }
+                    else if(frompage=="lastestpost"){
+                        changepage(2);
+                    }
+                    else if(frompage=="featured"){
+                        changepage(1);
+                    }
+                    
+                    $.when(dmzProcess).done(function(){
+                        try{
+                            app.initPushNotificationRegister();
+                        }
+                        catch(ex){
+    //                        alert(ex.message);
+                        }
+
+                        initLoginButton();
+                        initInboxButton();
+                        inboxMessage.checkNewMessageNumber();
+                        slideMenu.initSlideMenu();
+                        getFeaturedList();
+                    });
+            });
         </script>
     </body>
 </html>

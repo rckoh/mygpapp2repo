@@ -1,0 +1,685 @@
+@media(min-width:320px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+    width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:6%;
+}
+
+.pageone{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-transition: transform 400ms ease;
+        -moz-transition: transform 400ms ease;
+        transition: transform 400ms ease;
+}
+
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* listview Style Page 1*/
+.wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    top: 0px;
+    overflow:auto;
+}
+
+.scrollul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollli {
+    padding:0 10px;
+    height:auto;
+    line-height:40px;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+/*    background-color:#fafafa;*/
+    font-size:14px;
+/*    border-bottom: 1px dotted #333;  */
+    border-bottom: none;
+}
+
+.scrollli:hover {
+    background-color: none;
+}
+
+.scroll-content {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+
+.scrollli h1{
+    font-family: "Roboto-Regular";
+    font-size: 17px;
+    color: #46a19a;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: 30px;
+}
+
+.scrollli h2{
+    font-family: "Roboto-Regular";
+    font-size: 15px;
+    color: #46a19a;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: 30px;
+}
+
+.scrollli p{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+}
+
+.msgInfo{
+    margin: 0px 0px 0px 0px;
+    font-family: "Roboto-Light";
+    font-size: 4vw;
+    line-height: 4.1vw;
+}
+
+.msgTitle{
+    font-family: "Roboto-Bold";
+    font-size: 5vw;
+    color: #e2424f;
+    margin: 0px 0px 0px 0px;
+    line-height: 5.1vw;
+}
+
+.msgDate{
+    font-family: "Roboto-regular";
+    font-size: 4vw;
+    color: #e2424f;
+    margin: 0px 0px 0px 0px;
+    line-height: 4.1vw;
+}
+
+
+.seperator{
+    border-bottom: 1px solid #565656;
+    margin: 0px 0px 0px 0px;
+    line-height: 10px;
+}
+
+.description{
+    font-family: "Roboto-Regular"; 
+    font-size: 3.4vw; 
+    text-align: justify;
+    color: #565656; 
+    line-height: 3.4vw;
+}
+
+.h2seperator{
+    border-bottom: 1px solid #46a19a;
+    width: 10px;
+    line-height: 10px;
+}
+
+
+/* listview Style Page 1 end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* reply message*/
+.messageDiv{
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top:0%;
+    background-color: lightgray;
+    z-index: 99;
+    width: 100%;
+    display: none;
+    background: URL("../img/login.jpg");
+    background-size: auto auto;
+    background-repeat: no repeat;
+}
+
+.replyMessageInput{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 15%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565656;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.btnSend{
+    position: absolute;
+    right: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnClose{
+    position: absolute;
+    left: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnSend img{
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+
+.replyMessageLbl{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 8%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 4vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* Page footer*/
+.pageFooter{
+    height:6%;
+    position: absolute;
+    bottom:0px;
+    background-color: white;
+    z-index: 89;
+    width: 100%;
+}
+
+.deleteBtn{
+/*
+    position: absolute;
+    left: 0px;
+*/
+    float: left;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    z-index: 90;
+}
+
+.deleteBtn img{
+    height: 100%;
+    width: auto;
+}
+
+.replyBtn{
+/*
+    position: absolute;
+    left: 50px;
+*/
+    float: left;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    z-index: 90;
+}
+
+.replyBtn img{
+    height: 100%;
+    width: auto;
+}
+
+.previousBtn{
+    position: absolute;
+    left: 69%;
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    border: none;
+    z-index: 90;
+}
+
+.previousBtn img{
+    height: 80%;
+    width: auto;
+}
+
+.nextBtn{
+    position: absolute;
+    left: 84%;
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    border: none;
+    z-index: 90;
+}
+
+.nextBtn img{
+    height: 80%;
+    width: auto;
+}
+/* Page footer end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+}
+
+@media(min-width:600px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+    width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:6%;
+}
+
+.pageone{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        -webkit-transition: transform 400ms ease;
+        -moz-transition: transform 400ms ease;
+        transition: transform 400ms ease;
+}
+
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* listview Style Page 1*/
+.wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    top: 0px;
+    overflow:auto;
+}
+
+.scrollul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollli {
+    padding:0 10px;
+    height:auto;
+    line-height:40px;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+/*    background-color:#fafafa;*/
+    font-size:14px;
+/*    border-bottom: 1px dotted #333;  */
+    border-bottom: none;
+}
+
+.scrollli:hover {
+    background-color: none;
+}
+
+.scroll-content {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+
+.scrollli h1{
+    font-family: "Roboto-Regular";
+    font-size: 17px;
+    color: #46a19a;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: 30px;
+}
+
+.scrollli h2{
+    font-family: "Roboto-Regular";
+    font-size: 15px;
+    color: #46a19a;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: 30px;
+}
+
+.scrollli p{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+}
+
+.msgInfo{
+    margin: 0px 0px 0px 0px;
+    font-family: "Roboto-Light";
+    font-size: 4vw;
+    line-height: 4.1vw;
+}
+
+.msgTitle{
+    font-family: "Roboto-Bold";
+    font-size: 5vw;
+    color: #e2424f;
+    margin: 0px 0px 0px 0px;
+    line-height: 5.1vw;
+}
+
+.msgDate{
+    font-family: "Roboto-regular";
+    font-size: 4vw;
+    color: #e2424f;
+    margin: 0px 0px 0px 0px;
+    line-height: 4.1vw;
+}
+
+
+.seperator{
+    border-bottom: 1px solid #565656;
+    margin: 0px 0px 0px 0px;
+    line-height: 10px;
+}
+
+.description{
+    font-family: "Roboto-Regular"; 
+    font-size: 3.4vw; 
+    text-align: justify;
+    color: #565656; 
+    line-height: 3.4vw;
+}
+
+.h2seperator{
+    border-bottom: 1px solid #46a19a;
+    width: 10px;
+    line-height: 10px;
+}
+
+
+/* listview Style Page 1 end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* reply message*/
+.messageDiv{
+    height:100%;
+    width: 100%;
+    position: absolute;
+    top:0%;
+    background-color: lightgray;
+    z-index: 99;
+    width: 100%;
+    display: none;
+    background: URL("../img/login.jpg");
+    background-size: auto auto;
+    background-repeat: no repeat;
+}
+
+.replyMessageInput{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 15%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565656;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.btnSend{
+    position: absolute;
+    right: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnClose{
+    position: absolute;
+    left: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnSend img{
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+
+.replyMessageLbl{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 8%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 4vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* Page footer*/
+.pageFooter{
+    height:6%;
+    position: absolute;
+    bottom:0px;
+    background-color: white;
+    z-index: 89;
+    width: 100%;
+}
+
+.deleteBtn{
+/*
+    position: absolute;
+    left: 0px;
+*/
+    float: left;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    z-index: 90;
+}
+
+.deleteBtn img{
+    height: 100%;
+    width: auto;
+}
+
+.replyBtn{
+/*
+    position: absolute;
+    left: 50px;
+*/
+    float: left;
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+    border: none;
+    z-index: 90;
+}
+
+.replyBtn img{
+    height: 100%;
+    width: auto;
+}
+
+.previousBtn{
+    position: absolute;
+    left: 69%;
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    border: none;
+    z-index: 90;
+}
+
+.previousBtn img{
+    height: 80%;
+    width: auto;
+}
+
+.nextBtn{
+    position: absolute;
+    left: 84%;
+    height: 100%;
+    width: 15%;
+    background-color: transparent;
+    border: none;
+    z-index: 90;
+}
+
+.nextBtn img{
+    height: 80%;
+    width: auto;
+}
+/* Page footer end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+}

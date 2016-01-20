@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+<!--        <link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.4.5.css"/>-->
+        <title>Home Page</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript" src="js/webRequest.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="facebookConnectPlugin.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+            $(document).bind('mobileinit',function(){
+                $.mobile.loadingMessage = false;
+            })
+        </script>  
+        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+<!--        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="css/login.css" />
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <script type="text/javascript" src="js/slidemenu.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("deviceready", onDeviceReady, false);
+            
+            function onDeviceReady() {
+                var marginleft=$(".app").width()/2-$(".appLogo").width()/2;
+                $(".appLogo").css("margin-left", marginleft);
+                
+//			     document.addEventListener("backbutton", onBackKeyDown, false);
+            }
+            
+            function backToIndex(){
+                window.location="index.html";
+            }
+        </script>
+        <script type="text/javascript" src="js/menuclick.js"></script>
+        
+    </head>
+    <body>
+        <div data-role="app" class="app" id="app">
+            <div class="content">
+                <div class="appLogoFrame">
+                    <img class="appLogo" src="img/mdec.png"/>
+                </div>
+                <div class="loginDetails">
+                    <img class="loginLogo" src="img/user-3.png"/><input class="loginTextBox" placeholder="USER NAME" type="text" maxlength="15" id="username"></input>
+                    <br>
+                    <img class="pwdLogo" src="img/password.png"/><input class="pwdTextBox" placeholder="PASSWORD" type="password" maxlength="15" id="password"></input>
+                </div>
+            </div>
+            <div class="seperator">
+                &nbsp;
+            </div>
+            <div class="loginActionFrame">
+                <table style="width:100%">
+                    <tr style="width:100%">
+                        <td style="width:45%;">
+                            <button class="btnForgetPassword" onclick="forgetPwdOnClick();">Forget Password</button>
+                        </td>
+                        <td style="width:10%; text-align:center;" class="buttonSeperator">|</td>
+                        <td style="width:45%">
+                            <button class="btnLogin" onclick="login();">Login</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="seperatortwo">
+                &nbsp;
+            </div>
+            <div class="loginActionFrametwo">
+                <table style="width:100%">
+                    <tr style="width:100%">
+                        <td style="width:45%;">
+                            <button class="backBtn" onclick="backToIndex();">Back</button>
+                        </td>
+                        <td style="width:10%; text-align:center;" class="buttonSeperator">|</td>
+                        <td style="width:45%">
+                            <button class="btnRegister" onclick="openRegisterPage();">New User?</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+<!--
+            <div class="divBackBtn">
+                <table style="width:100%">
+                    
+                </table>
+            </div>
+-->
+            <div class='forgetPwdFrame'>
+                <div class='forgetPwdDiv'>
+                    <label class='forgetPwdLbl'>Forget Password</label>
+                    <label class='forgetPwdDetailLbl'>Enter username or email address. A new password will be send to your mailbox.</label>
+                    <input class='keyTxt' type='text'></input>
+                    <div class="btnForgetPwdTopSeperator">
+                    </div>
+                    <button class='btnForgetPwdClose' onclick='forgetPwdOnClick();'>Close</button>
+                    <button class='btnForgetPwdSeperator'>|</button>
+                    <button class='btnForgetPwd' onclick='forgetPwd();'>Forget Password</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            
+            app.initialize();
+            dbmanager.initdb();
+            $(document).ready(function(){
+                $("#username").keypress(function(e) {
+                    var code = (e.keyCode ? e.keyCode : e.which);
+                    if ( (code==13) || (code==10))
+                        {
+                            $("#username").blur();
+                            $("#password").blur();
+                            login();
+                        }
+                });
+                
+                $("#password").keypress(function(e) {
+                    var code = (e.keyCode ? e.keyCode : e.which);
+                    if ( (code==13) || (code==10))
+                        {
+                            $("#username").blur();
+                            $("#password").blur();
+                            login();
+                        }
+                });
+                
+                $(".keyTxt").keypress(function(e) {
+                    var code = (e.keyCode ? e.keyCode : e.which);
+                    if ( (code==13) || (code==10))
+                        {
+                            $(".keyTxt").blur();
+                            forgetPwd();
+                        }
+                });
+//                $(".appLogo").load(function(){
+////                    $(this).width();
+//                    var marginleft=$(".app").width()/2-$(this).width()/2;
+//			     $(".appLogo").css("margin-left", marginleft);    
+            });
+        </script>
+    </body>
+</html>

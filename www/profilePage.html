@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+<!--        <link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.4.5.css"/>-->
+        <title>Home Page</title>
+        <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/profilePage.js"></script>
+        <script type="text/javascript" src="facebookConnectPlugin.js"></script>
+        <script type="text/javascript" src="js/webRequest.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/slidemenu.js"></script>
+        <script type="text/javascript" src="js/queryStr.js"></script>
+        <script type="text/javascript">
+            $(document).bind('mobileinit',function(){
+                $.mobile.loadingMessage = false;
+            })
+        </script>  
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/profilePage.css" />
+        <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
+        <script type="text/javascript">
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var menuStatus;
+            //bind swipe event with jquery
+            $(function(){
+	
+                $("#pageBody").on("swipeleft", function(){
+                    pageSwipeLeft();
+                });
+
+                $("body").on("swiperight", function(){
+                    pageSwipeRight();
+                });	
+
+            });
+
+            function onDeviceReady() {  
+            }
+        </script>
+    </head>
+    <body id="pageBody">
+        <div data-role="app" class="app" id="app">
+            <div class="menuheader">
+                <div class="menuheaderleft">
+                    <button class="buttonbg"><img class="menubutton" src="img/drawer.png"></img></button>
+                </div>
+                <div class="menuheaderright">
+                     <button class="pagetitle">My Profile</button>
+                    
+                    <button class="pageTitileImgBG" id="pageTitileImgBG" onclick=""><img class="pageTitileImg" src="img/user-2.png"></img></button>
+                   <button class="inboxBtn" onclick="goInbox()"><img class="inboxBtnImg" src="img/message.png"></img></button>
+                </div>
+<!--
+                <table class="menuheadertable">
+                    <tr>
+                        <td>
+                            <button class="buttonbg"><img class="menubutton" src="img/drawer.png"></img></button>
+                        </td>
+                        <td style="text-align:right;">
+                            <button class="pageTitileImgBG"><img class="pageTitileImg" src="img/user-2.png"></img></button>
+                            <label class="pagetitle">My Profile</label>
+                        </td>
+                    </tr>
+                </table>
+-->
+            </div>
+            <div class="menubg">
+                <div class="searchbox">
+                    <script type="text/javascript" src="js/searchBox.js"></script>
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <ul id="slidemenu">
+                        <script type="text/javascript" src="js/slidemenuitem.js"></script>
+                    </ul>    
+                </div>
+                <div class="menufooter">
+                    <img src="img/menufooter-2.png" class="footerimage"/>
+                </div>
+            </div>
+            <div class="content">
+                <div class="profileDiv">
+                        <div class="profilePicFrame">
+                            <div class="helper"></div>
+                            <img class="profileImg" id="imgProfile" src=""/>
+                        </div>
+                        <label class="username" id="lblUSername"></label>
+                        <img src="" class="profileBG" id="profileBG"></img>
+                        <div class="profileStatistic">
+                            <table class="profileStatisticTable">
+                                <tr style="width:100%;">
+                                    <td style="width:33.33%;">
+                                        <label class="statisticNumber" id="lblviewnumber">0</label><br>
+                                        <label class="statisticLbl">Views</label>
+                                    </td>
+                                    <td style="width:33.33%">
+                                        <label class="statisticNumber" id=lblfavnumber>0</label><br>
+                                        <label class="statisticLbl">Favourites</label>
+                                    </td>
+                                    <td style="width:33.33%">
+                                        <label class="statisticNumber" id="lblsharenumber">0</label><br>
+                                        <label class="statisticLbl">Shares</label>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="subheaderblack">
+                            <div>
+                                <table class="subheadertable">
+                                <tr style="width:32.67%:height:100%;">
+                                    <td style="width:49.5%;">
+                                        <button class="subheaderbutton" onclick="changepage(1);" id="btnPoints">Points</button>
+                                    </td>
+                                    <td style="width:1%">
+                                        &nbsp;|&nbsp;
+                                    </td>
+                                    <td style="width:49.5%">
+                                        <button class="subheaderbutton" onclick="changepage(2);" id="btnProducts">Products & Services</button>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                            <div class="selectedItem">
+                            </div>
+                        </div>
+                    </div>
+                <div class="pageone">
+                    <div class="wrapper" id="wrapper">
+                        <div class="scroll-content" id="scroll-content">
+                            <table style="width:100%;">
+                                <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr>
+                                    <td style="width:10%">&nbsp;</td>
+                                    <td class="totalPointLbl">Total Point Earned</td>
+                                    <td class="totalPointSeperator">-</td>
+                                    <td class="totalPoint"><label id="lblpointearn">0 Points</label></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr>
+                                    <td style="width:10%">&nbsp;</td>
+                                    <td class="totalPointLbl">Total Point Redeemed</td>
+                                    <td class="totalPointSeperator">-</td>
+                                    <td class="totalPoint"><label id="lblpointredeem">0 Points</label></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr><td>&nbsp;</td></tr>
+                                <tr>
+                                    <td style="width:10%">&nbsp;</td>
+                                    <td class="totalPointLbl">Total Points</td>
+                                    <td class="totalPointSeperator">-</td>
+                                    <td class="totalPoint"><label id="lblpointbalance">0 Points</label></td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="totalPointFooter">Note:<br>To redeem your points, please login to the website.</div>
+                    </div>
+                </div>
+                <div class="pagetwo">
+                    <div class="wrapperPage2" id="wrapper">
+                        <div class="scroll-contentPage2" id="scroll-content">
+                            <ul class="scrollulPage2" id="scrollul">
+<!--
+                                <li class="scrollliPage2">
+                                    <table class="listviewitemframePage2">
+                                        <tr>
+                                            <td style="width:20%"><img class="listviewimgPage2" src="http://cdn.playbuzz.com/cdn/fdbf1197-18af-43df-a5b1-76d180475700/49081b85-5614-4368-9103-71d9f0651322.jpg">
+                                            </td>
+                                            <td>
+                                                <h1 class="listviewitemtitlePage2">Some Title</h1>
+                                                <p class="listviewitemseperatorPage2">&nbsp;</p>
+                                                <p class="listviewitemdetailsPage2">We developed enterprise level office PABX that cater for everyteleprothy needs.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+-->
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script type="text/javascript" src="../plugins/iscroll-master/build/iscroll-lite.js"></script>
+ 
+        <script type="text/javascript">
+
+        var theScroll;
+        function scroll() {
+            theScroll = new iScroll('wrapper');
+        }
+        </script>
+        <script type="text/javascript">
+            app.initialize();
+            dbmanager.initdb();
+            $(document).ready(function(){
+                $(".profilePicFrame").width( $(".profilePicFrame").height());
+                var marginleft=$(".app").width()/2 - $(".profilePicFrame").width()/2;
+                $(".profilePicFrame").css("margin-left", marginleft);    
+                $(".profilePicFrame").show();  
+                
+                initsubmenustyle();
+                slideMenu.initSlideMenu();
+                var tabname=getUrlParameter("tab");
+                if(tabname=='pns'){
+                    changepage(2);
+                }
+                
+                initcompanyprofile();
+                initUserPoint();
+                initInboxButton();
+                inboxMessage.checkNewMessageNumber();
+            });
+            
+        </script>
+    </body>
+</html>

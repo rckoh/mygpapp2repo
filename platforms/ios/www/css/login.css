@@ -1,0 +1,764 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+    font-family: 'Roboto-Regular'; /*a name to be used later*/
+    src: url('../font/Roboto-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Roboto-Bold'; /*a name to be used later*/
+    src: url('../font/Roboto-Bold.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Roboto-Light'; /*a name to be used later*/
+    src: url('../font/Roboto-Light.ttf'); /*URL to font*/
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    -webkit-overflow-scrolling: touch;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+/*    background-color:#53DCDF;*/
+    background-color: #32978f;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:2.4vw;
+    text-transform:uppercase;
+    background: URL("../img/login.jpg");
+    background-size: 100% 100%  ;
+    background-repeat: no-repeat;
+}   
+
+button:focus { 
+    outline:0 !important; 
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px 0px 0px 0px;
+}
+
+li:hover{
+    background-color: aqua;
+}
+
+/*
+input{
+    text-indent: 10px;
+    background-color: #44c5c7; 
+    color: white;
+    border: 1px solid white;
+    border-color:white;
+    border-style: solid;
+    
+}
+*/
+
+input:focus { 
+    outline:0 !important; 
+}
+
+:-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #000000;
+    opacity:  0.5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000000;
+    opacity:  0.5;
+}
+:-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000000;
+    opacity:  0.5;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #000000;
+    opacity:  0.5;
+}
+
+
+.app {
+/*    background:url(../img/pssb_logo.png) no-repeat center top;  170px x 200px */
+    
+/*    left:50%;*/
+/*    top:50%;*/
+    height:100%;                    
+    width:100%;                    
+/*    text-align:center;*/
+    padding:0px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:0px 0px 0px 0px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:2.4vw;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+@media(min-width:320px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* Login Style*/
+.content{
+	position:absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.appLogoFrame{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 20%;
+}
+
+.appLogo{
+    width: auto;
+    height: 100%;
+/*    display: inline-block;*/
+}
+
+.loginDetails{
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    top: 40%;
+    align-items: center;
+}
+
+.loginLogo{
+    width: auto;
+    height: 15%;
+/*    display: inline-block;*/
+    position: absolute;
+    /* margin: 0px 0px 0px 10%; */
+    border: 1px solid gray;
+	left:10%;
+}
+
+.loginTextBox{
+/*    display: inline-block;*/
+    position: absolute;
+    right: 10%;
+    height: 15%;
+    width: 65%;
+/*    margin: 0px 0px 0px 10%;*/
+    background-color: transparent;
+    font-family: "Roboto-Light";
+    font-size: 3vw;
+/*    text-transform: uppercase;*/
+}
+
+.pwdLogo{
+    width: auto;
+    height: 15%;
+/*    display: inline-block;*/
+    position: absolute;
+    top: 25%;
+	left:10%;
+    /* margin: 0px 0px 0px 10%; */
+    border: 1px solid gray;
+}
+
+.pwdTextBox{
+/*    display: inline-block;*/
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    height: 15%;
+/*    margin:0 auto;*/
+    width: 65%;
+    /* margin: 0px 0px 0px 10%; */
+    background-color: transparent;
+    font-family: "Roboto-Light";
+    font-size: 3vw;
+/*    text-transform: uppercase;*/
+}
+
+.seperator{
+    position: absolute;
+    top: 60%;
+    height: 10px;
+    width: 70%;
+    border-bottom: 2px solid #6B6B6B;
+    margin: 0px 0px 0px 15%;
+}
+
+.seperatortwo{
+    position: absolute;
+    top: 70%;
+    height: 10px;
+    width: 70%;
+    border-bottom: 2px solid #6B6B6B;
+    margin: 0px 0px 0px 15%;
+}
+
+.loginActionFrame{
+    position: absolute;
+    top: 63%;
+    margin: 0px 0px 0px 10%;
+    /* background-color: antiquewhite; */
+    width: 80%;
+    
+}
+
+.loginActionFrametwo{
+    position: absolute;
+    top: 73%;
+    margin: 0px 0px 0px 10%;
+    width: 80%;
+    
+}
+
+.btnForgetPassword{
+    background-color: transparent;
+    width: 100%;
+    font-size: 3.5vw;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+.btnLogin{
+    background-color: transparent;
+    width: 100%;
+    font-size: 3.5vw;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+.buttonSeperator{
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+    font-size: 4vw;
+}
+
+.divBackBtn{
+    position: absolute;
+    top: 68%;
+    left: 0;
+/*    background-color: antiquewhite; */
+    width: 100%;
+}
+
+.backBtn{
+    background-color: black;
+    width: 100%;
+    font-size: 3.5vw;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+.btnRegister{
+    background-color: transparent;
+    width: 100%;
+    font-size: 3.5vw;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+/* Login Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* forget password*/
+
+.forgetPwdDiv{
+    height:100%;
+    width: 100%;
+    position: relative;
+    top:0%;
+    background-color: lightgray;
+    width: 100%;
+    background: URL("../img/login.jpg");
+    background-size: auto auto;
+    background-repeat: no repeat;
+}
+
+
+.keyTxt{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height:5%;
+    top: 30%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565656;
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+
+.btnForgetPwd{
+    position: absolute;
+    outline: 0;
+    height: 5%;
+    top: 48%;
+    width: auto;
+    background-color: transparent;
+    font-size: 3.5vw;
+    right:20%;
+    width: 30%;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+
+}
+
+.btnForgetPwdClose{
+    position: absolute;
+    left: 20%;
+    outline: 0;
+    height: 5%;
+    top: 48%;
+    width: auto;
+    background-color: transparent;
+    font-size: 3.5vw;
+    width: 30%;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+
+
+.forgetPwdLbl{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 15%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 4vw;
+    padding: 1vw;
+}
+
+.forgetPwdFrame{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: transparent;
+    z-index: 89;
+}
+
+.forgetPwdDetailLbl{
+    text-align: left;
+    width: 90%;
+    left: 5%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 20%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;    
+    font-size: 3vw;
+    padding: 1vw;
+    text-transform: capitalize;
+}
+    
+
+.btnForgetPwdSeperator{
+    position: absolute;
+    height: 5%;
+    top: 48%;
+    width: 2px;
+    background-color: transparent;
+    font-size: 4vw;
+    right:50%;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+    line-height: 100%;
+}
+    
+.btnForgetPwdTopSeperator{
+    position: absolute;
+    top: 45%;
+    height: 10px;
+    width: 70%;
+    border-bottom: 2px solid #6B6B6B;
+    margin: 0px 0px 0px 15%;
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+}
+
+@media(min-width:600px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* Login Style*/
+.content{
+	position:absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.appLogoFrame{
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    height: 20%;
+}
+
+.appLogo{
+    width: auto;
+    height: 100%;
+/*    display: inline-block;*/
+}
+
+.loginDetails{
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    top: 40%;
+    align-items: center;
+}
+
+.loginLogo{
+    width: auto;
+    height: 15%;
+/*    display: inline-block;*/
+    position: absolute;
+    /* margin: 0px 0px 0px 10%; */
+    border: 1px solid gray;
+	left:10%;
+}
+
+.loginTextBox{
+/*    display: inline-block;*/
+    position: absolute;
+    right: 10%;
+    height: 15%;
+    width: 65%;
+/*    margin: 0px 0px 0px 10%;*/
+    background-color: transparent;
+    font-family: "Roboto-Light";
+    font-size: 3vw;
+/*    text-transform: uppercase;*/
+}
+
+.pwdLogo{
+    width: auto;
+    height: 15%;
+/*    display: inline-block;*/
+    position: absolute;
+    top: 25%;
+	left:10%;
+    /* margin: 0px 0px 0px 10%; */
+    border: 1px solid gray;
+}
+
+.pwdTextBox{
+/*    display: inline-block;*/
+    position: absolute;
+    right: 10%;
+    top: 25%;
+    height: 15%;
+/*    margin:0 auto;*/
+    width: 65%;
+    /* margin: 0px 0px 0px 10%; */
+    background-color: transparent;
+    font-family: "Roboto-Light";
+    font-size: 3vw;
+/*    text-transform: uppercase;*/
+}
+
+.seperator{
+    position: absolute;
+    top: 60%;
+    height: 10px;
+    width: 70%;
+    border-bottom: 2px solid #6B6B6B;
+    margin: 0px 0px 0px 15%;
+}
+
+.seperatortwo{
+    position: absolute;
+    top: 70%;
+    height: 10px;
+    width: 70%;
+    border-bottom: 2px solid #6B6B6B;
+    margin: 0px 0px 0px 15%;
+}
+
+.loginActionFrame{
+    position: absolute;
+    top: 63%;
+    margin: 0px 0px 0px 10%;
+    /* background-color: antiquewhite; */
+    width: 80%;
+    
+}
+
+.loginActionFrametwo{
+    position: absolute;
+    top: 73%;
+    margin: 0px 0px 0px 10%;
+    width: 80%;
+    
+}
+
+.btnForgetPassword{
+    background-color: transparent;
+    width: 100%;
+    font-size: 3.5vw;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+.btnLogin{
+    background-color: transparent;
+    width: 100%;
+    font-size: 3.5vw;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+.buttonSeperator{
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+    font-size: 4vw;
+}
+
+.divBackBtn{
+    position: absolute;
+    top: 68%;
+    left: 0;
+/*    background-color: antiquewhite; */
+    width: 100%;
+}
+
+.backBtn{
+    background-color: black;
+    width: 100%;
+    font-size: 3.5vw;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+.btnRegister{
+    background-color: transparent;
+    width: 100%;
+    font-size: 3.5vw;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+/* Login Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* forget password*/
+
+.forgetPwdDiv{
+    height:100%;
+    width: 100%;
+    position: relative;
+    top:0%;
+    background-color: lightgray;
+    width: 100%;
+    background: URL("../img/login.jpg");
+    background-size: auto auto;
+    background-repeat: no repeat;
+}
+
+
+.keyTxt{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height:5%;
+    top: 30%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565656;
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+
+.btnForgetPwd{
+    position: absolute;
+    outline: 0;
+    height: 5%;
+    top: 48%;
+    width: auto;
+    background-color: transparent;
+    font-size: 3.5vw;
+    right:20%;
+    width: 30%;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+
+}
+
+.btnForgetPwdClose{
+    position: absolute;
+    left: 20%;
+    outline: 0;
+    height: 5%;
+    top: 48%;
+    width: auto;
+    background-color: transparent;
+    font-size: 3.5vw;
+    width: 30%;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+}
+
+
+
+.forgetPwdLbl{
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 15%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 4vw;
+    padding: 1vw;
+}
+
+.forgetPwdFrame{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: transparent;
+    z-index: 89;
+}
+
+.forgetPwdDetailLbl{
+    text-align: left;
+    width: 90%;
+    left: 5%;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 20%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;    
+    font-size: 3vw;
+    padding: 1vw;
+    text-transform: capitalize;
+}
+    
+
+.btnForgetPwdSeperator{
+    position: absolute;
+    height: 5%;
+    top: 48%;
+    width: 2px;
+    background-color: transparent;
+    font-size: 4vw;
+    right:50%;
+    border: none;
+    color: #6b6b6b;
+    font-family: "Roboto-Light";
+    line-height: 100%;
+}
+    
+.btnForgetPwdTopSeperator{
+    position: absolute;
+    top: 45%;
+    height: 10px;
+    width: 70%;
+    border-bottom: 2px solid #6B6B6B;
+    margin: 0px 0px 0px 15%;
+}
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+}

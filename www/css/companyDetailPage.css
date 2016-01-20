@@ -1,0 +1,1182 @@
+@media(min-width:320px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* submenu Style */
+.submenu{
+	position: absolute;
+	top:6%;
+    background-color:white;
+    text-align:justify;
+    color: #df2d3c;
+    height: 6%;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 3.5vw;
+}
+
+.backBtn{
+    background-color: transparent;
+    border:none;
+    height: 100%;
+	width:auto;
+}
+
+.backBtnImgSmall{
+    vertical-align:middle;
+    background-color: transparent;
+    margin: auto;
+}
+
+.btnBackLbl{
+    line-height: 100%;
+    height: 100%;
+    font-size: 4.5vw;
+    color: #df2d3c;
+}
+
+/* submenu Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+    width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:12%;
+    
+}
+
+.pageone{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* listview Style Page 1*/
+.wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    bottom: 0%;
+    overflow:auto;
+}
+
+.scrollul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollli {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: none;  
+}
+
+.scrollliChild {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px solid #565656;  
+}
+
+.scrollli:hover {
+    background-color: none;
+}
+
+.scroll-content {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+
+.lih1class{
+    font-family: "Roboto-Regular";
+    font-size: 4vw;
+    line-height: 4.5vw;
+    color: #df2d3c;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: auto;
+}
+
+.lih2class{
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    line-height: 3.5vw;
+    color: #df2d3c;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: 30px;
+}
+
+/*
+.scrollli p{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+}
+*/
+
+.pBtn button{
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.listviewitemtitlechild{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.2vw;
+    height: auto;
+    max-height: 8.4vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+    
+/*
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4vw;
+    height: 4vw;
+    max-height: 4vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    word-break: normal;
+    text-overflow:clip;
+    overflow: hidden;
+*/
+}
+
+.listviewitemdetails{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+
+}
+
+.listviewitemseperator{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframe{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.listviewimg{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.pBtn button img{
+    width: auto;
+    height: 20px;
+}
+
+#productImg{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+#galleryImg{
+    width: 60%;
+    height: auto;
+}
+
+.seperator{
+    border-bottom: 2px dotted #df2d3c;
+    margin: 0px 0px 0px 0px;
+    line-height: 2px;
+}
+
+.lineseperator{
+    border-bottom: 2px solid #df2d3c;
+    margin: 0px 0px 30px 0px;
+    line-height: 2px;
+}   
+
+.description{
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+    line-height: 4vw;
+    text-align: justify;
+    color: #565656;
+    margin-top: 10px;
+}
+
+.h2seperator{
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    line-height: 10px;
+}
+
+.brouchurelink{
+    width: 100%;
+    word-wrap: break-word;
+    
+}
+
+.companyInfo{
+    width: 100%;
+}
+
+.companyInfo span{
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 100%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+.companyInfo tr td: first-child{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+.companyInfo tr td:2th-child{
+    width: 2%;
+    line-height: 100%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+.companyInfo tr td:last-child{
+    width: 68%;
+    line-height: 100%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+
+.companyStatistic{
+    width: 40%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+.companyStatistic tr td: first-child{
+    width: 30%;
+    line-height: 4vw;
+}
+
+.companyStatistic tr td:2th-child{
+    width: 2%;
+    line-height: 4vw;
+}
+
+.companyStatistic tr td:last-child{
+    width: 68%;
+    line-height: 4vw;
+}
+
+.buttonSpan{
+    position: absolute;
+    right: 0px;
+    height: 6vw;
+}
+
+.buttonSpan button{
+    background-color: transparent;
+    outline: 0px;
+    border: none;
+    height: 100%;  
+}
+
+.buttonSpan button img{
+    height: 80%;  
+    width: auto;
+}
+.buttonSpan button:nth-child(2){
+    display: none;
+}
+
+.buttonSpan button:nth-child(3){
+    display: none;
+}
+
+.companyDetails{
+    width: 100%;
+    background-color:#E6E6E6; 
+}
+
+.requirement{
+    width: 50%;
+    height: 7vw;
+    text-align: center;
+    background-color: lightgrey;
+    line-height: 7vw;
+    float: left;
+    font-family: "Roboto-Bold";
+    font-size: 3.5vw;
+    color: #565656;
+}
+
+.awards{
+    width: 50%;
+    height: 7vw;
+    left: 50%;
+    text-align: center;
+    background-color: lightgrey;
+    line-height: 7vw;
+    margin-left: 50%;
+    font-family: "Roboto-Bold";
+    font-size: 3.5vw;
+    color: #BDBDBD;
+}
+
+.companyDetailsDescriptionOne{
+    margin: 2vw 2vw 2vw 2vw;
+    background-color: #E6E6E6;
+    text-align: justify;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+    color: #565656;
+}
+
+.companyDetailsDescriptionTwo{
+    margin: 2vw 2vw 2vw 2vw;
+    background-color: #E6E6E6;
+    text-align: justify;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+    color: #565656;
+    display: none;
+}
+
+.selectedItem{
+    width: 50%;
+    line-height: 0.5vw;
+    background-color: #565656;
+}
+
+.requirementBtn{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: "Roboto-Bold";
+    font-size: 3.5vw;
+    color: #565656;
+}
+
+.awardsBtn{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: "Roboto-Bold";
+    font-size: 3.5vw;
+    color: #BDBDBD;
+}
+/* listview Style Page 1 end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* reply message*/
+.messageDiv{
+    height:100%;
+    width: 100%;
+    position: relative;
+    top:0%;
+    background-color: lightgray;
+    width: 100%;
+    background: URL("../img/login.jpg");
+    background-size: auto auto;
+    background-repeat: no repeat;
+
+}
+
+.replyMessageInput{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height: 65%;
+    top: 25%;
+    border-radius: 10px;
+    background-color: white;
+    border-color: black;
+    color: #565656;
+    resize: none;
+    min-height: 65%;
+    max-height: 65%;    
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.replyMessageSubject{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height:7%;
+    top: 13%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565656;
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+.btnSend{
+    position: absolute;
+    right: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnClose{
+    position: absolute;
+    left: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnSend img{
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+
+.replyMessageLbl{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 5%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 4vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.messageDivFrame{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: transparent;
+    z-index: 89;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #565656;
+    opacity:  0.4;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #565656;
+   opacity:  0.4;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #565656;
+   opacity:  0.4;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #565656;
+    opacity:  0.4;
+}
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+}
+
+@media(min-width:600px){
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* submenu Style */
+.submenu{
+	position: absolute;
+	top:6%;
+    background-color:white;
+    text-align:justify;
+    color: #df2d3c;
+    height: 6%;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    font-size: 3.5vw;
+}
+
+.backBtn{
+    background-color: transparent;
+    border:none;
+    height: 100%;
+	width:auto;
+}
+
+.backBtnImgSmall{
+    vertical-align:middle;
+    background-color: transparent;
+    margin: auto;
+}
+
+.btnBackLbl{
+    line-height: 100%;
+    height: 100%;
+    font-size: 4.5vw;
+    color: #df2d3c;
+}
+
+/* submenu Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+    width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:12%;
+    
+}
+
+.pageone{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* listview Style Page 1*/
+.wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    bottom: 0%;
+    overflow:auto;
+}
+
+.scrollul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollli {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: none;  
+}
+
+.scrollliChild {
+    padding:0 10px;
+    height:auto;
+    min-height: 20vw;
+    border-top:1px solid #fff;
+    border-bottom: 1px solid #565656;  
+}
+
+.scrollli:hover {
+    background-color: none;
+}
+
+.scroll-content {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+
+.lih1class{
+    font-family: "Roboto-Regular";
+    font-size: 4vw;
+    line-height: 4.5vw;
+    color: #df2d3c;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: auto;
+}
+
+.lih2class{
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    line-height: 3.5vw;
+    color: #df2d3c;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: 30px;
+}
+
+/*
+.scrollli p{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+}
+*/
+
+.pBtn button{
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.listviewitemtitlechild{
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4.2vw;
+    height: auto;
+    max-height: 8.4vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    overflow: hidden;
+    word-break:keep-all;
+    white-space: pre-wrap;
+    max-width: 70vw;
+    
+    
+/*
+    color: #df2d3c;
+    background-color: transparent;
+    font-weight: normal;
+    line-height: 4vw;
+    height: 4vw;
+    max-height: 4vw;
+    font-family: "Roboto-Medium";
+    font-size: 3.8vw;
+    margin: 5px 0px 0px 10px;
+    word-break: normal;
+    text-overflow:clip;
+    overflow: hidden;
+*/
+}
+
+.listviewitemdetails{
+    color: #565656;
+    background-color: transparent;
+    font-family: "Roboto-Regular";
+    font-size: 3vw;
+    font-weight: normal;
+    line-height: 3.5vw;
+    text-align: justify;
+    margin: 10px 0px 0px 10px;
+    max-height: 10.5vw;
+    text-overflow: clip;
+    overflow: hidden;
+
+}
+
+.listviewitemseperator{
+    line-height: 0.5vw;
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    margin: 2px 0px 0px 10px;
+}
+
+.listviewitemframe{
+    height:100%; 
+    width:100%;
+    vertical-align: top;
+    text-align: left;
+}
+
+.listviewimg{
+    width: 25vw;
+    height: auto;
+    display: block;
+}
+
+.pBtn button img{
+    width: auto;
+    height: 20px;
+}
+
+#productImg{
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+#galleryImg{
+    width: 60%;
+    height: auto;
+}
+
+.seperator{
+    border-bottom: 2px dotted #df2d3c;
+    margin: 0px 0px 0px 0px;
+    line-height: 2px;
+}
+
+.lineseperator{
+    border-bottom: 2px solid #df2d3c;
+    margin: 0px 0px 30px 0px;
+    line-height: 2px;
+}   
+
+.description{
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+    line-height: 4vw;
+    text-align: justify;
+    color: #565656;
+    margin-top: 10px;
+}
+
+.h2seperator{
+    border-bottom: 1px solid #df2d3c;
+    width: 30px;
+    line-height: 10px;
+}
+
+.brouchurelink{
+    width: 100%;
+    word-wrap: break-word;
+    
+}
+
+.companyInfo{
+    width: 100%;
+}
+
+.companyInfo span{
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 100%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+.companyInfo tr td: first-child{
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+.companyInfo tr td:2th-child{
+    width: 2%;
+    line-height: 100%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+.companyInfo tr td:last-child{
+    width: 68%;
+    line-height: 100%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+
+.companyStatistic{
+    width: 40%;
+    color: #565656;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+}
+
+.companyStatistic tr td: first-child{
+    width: 30%;
+    line-height: 4vw;
+}
+
+.companyStatistic tr td:2th-child{
+    width: 2%;
+    line-height: 4vw;
+}
+
+.companyStatistic tr td:last-child{
+    width: 68%;
+    line-height: 4vw;
+}
+
+.buttonSpan{
+    position: absolute;
+    right: 0px;
+    height: 6vw;
+}
+
+.buttonSpan button{
+    background-color: transparent;
+    outline: 0px;
+    border: none;
+    height: 100%;  
+}
+
+.buttonSpan button img{
+    height: 80%;  
+    width: auto;
+}
+.buttonSpan button:nth-child(2){
+    display: none;
+}
+
+.buttonSpan button:nth-child(3){
+    display: none;
+}
+
+.companyDetails{
+    width: 100%;
+    background-color:#E6E6E6; 
+}
+
+.requirement{
+    width: 50%;
+    height: 7vw;
+    text-align: center;
+    background-color: lightgrey;
+    line-height: 7vw;
+    float: left;
+    font-family: "Roboto-Bold";
+    font-size: 3.5vw;
+    color: #565656;
+}
+
+.awards{
+    width: 50%;
+    height: 7vw;
+    left: 50%;
+    text-align: center;
+    background-color: lightgrey;
+    line-height: 7vw;
+    margin-left: 50%;
+    font-family: "Roboto-Bold";
+    font-size: 3.5vw;
+    color: #BDBDBD;
+}
+
+.companyDetailsDescriptionOne{
+    margin: 2vw 2vw 2vw 2vw;
+    background-color: #E6E6E6;
+    text-align: justify;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+    color: #565656;
+}
+
+.companyDetailsDescriptionTwo{
+    margin: 2vw 2vw 2vw 2vw;
+    background-color: #E6E6E6;
+    text-align: justify;
+    font-family: "Roboto-Regular";
+    font-size: 3.5vw;
+    color: #565656;
+    display: none;
+}
+
+.selectedItem{
+    width: 50%;
+    line-height: 0.5vw;
+    background-color: #565656;
+}
+
+.requirementBtn{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: "Roboto-Bold";
+    font-size: 3.5vw;
+    color: #565656;
+}
+
+.awardsBtn{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-family: "Roboto-Bold";
+    font-size: 3.5vw;
+    color: #BDBDBD;
+}
+/* listview Style Page 1 end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* reply message*/
+.messageDiv{
+    height:100%;
+    width: 100%;
+    position: relative;
+    top:0%;
+    background-color: lightgray;
+    width: 100%;
+    background: URL("../img/login.jpg");
+    background-size: auto auto;
+    background-repeat: no repeat;
+
+}
+
+.replyMessageInput{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height: 65%;
+    top: 25%;
+    border-radius: 10px;
+    background-color: white;
+    border-color: black;
+    color: #565656;
+    resize: none;
+    min-height: 65%;
+    max-height: 65%;    
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.replyMessageSubject{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    height:7%;
+    top: 13%;
+    border-radius: 10px;
+    background-color: white;
+    color: #565656;
+    font-size: 3vw;
+    padding: 1vw;
+    box-sizing: border-box;
+    opacity: 1;
+}
+
+.btnSend{
+    position: absolute;
+    right: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnClose{
+    position: absolute;
+    left: 3%;
+    border: none;
+    outline: 0;
+    height: 5%;
+    top: 0;
+    width: auto;
+    background-color: transparent;
+    color: #df2d3c;
+    font-size: 3.5vw;
+}
+
+.btnSend img{
+    height: 100%;
+    width: auto;
+    background-color: transparent;
+}
+
+
+.replyMessageLbl{
+    width: 90%;
+    position: absolute;
+    left: 5%;
+    padding: 0;
+    margin: 0;
+    height: 80%;
+    top: 5%;
+    border-radius: 10px;
+    background-color: transparent;
+    color: #df2d3c;
+    resize: none;
+    min-height: 73%;
+    max-height: 73%;    
+    font-size: 4vw;
+    padding: 1vw;
+    box-sizing: border-box;
+}
+
+.messageDivFrame{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-color: transparent;
+    z-index: 89;
+}
+
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #565656;
+    opacity:  0.4;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #565656;
+   opacity:  0.4;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #565656;
+   opacity:  0.4;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #565656;
+    opacity:  0.4;
+}
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+}

@@ -1,0 +1,416 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+@font-face {
+    font-family: 'Roboto-Regular'; /*a name to be used later*/
+    src: url('../font/Roboto-Regular.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Roboto-Bold'; /*a name to be used later*/
+    src: url('../font/Roboto-Bold.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Roboto-Light'; /*a name to be used later*/
+    src: url('../font/Roboto-Light.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Roboto-Thin'; /*a name to be used later*/
+    src: url('../font/Roboto-Thin.ttf'); /*URL to font*/
+}
+
+@font-face {
+    font-family: 'Roboto-Medium'; /*a name to be used later*/
+    src: url('../font/Roboto-Medium.ttf'); /*URL to font*/
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;
+    -webkit-overflow-scrolling: touch;
+    /* prevent copy paste, to allow, change 'none' to 'text' */
+/*    background-color:#53DCDF;*/
+    background-color: white;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+/*    font-size:12px;*/
+/*    text-transform:uppercase;*/
+}
+
+button:focus { 
+    outline:0 !important; 
+}
+
+input{
+    text-indent: 10px;
+    background-color: #44c5c7; 
+    color: white;
+    border: 1px solid white;
+    border-color:white;
+    border-style: solid;
+    
+}
+
+input:focus { 
+    outline:0 !important; 
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ffffff;
+    opacity:  0.4;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #ffffff;
+   opacity:  0.4;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #ffffff;
+   opacity:  0.4;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #ffffff;
+    opacity:  0.4;
+}
+
+
+
+.app {
+/*    background:url(../img/pssb_logo.png) no-repeat center top;  170px x 200px */
+    
+/*    left:50%;*/
+/*    top:50%;*/
+    height:100%;                    
+    width:100%;                    
+/*    text-align:center;*/
+    padding:0px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:0px 0px 0px 0px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* Top Header Style*/
+.menuheader{
+    height: 6%;
+	width:100%;
+    background-color: #46a19a;
+	position:absolute;
+	top:0px;
+}
+
+.menuheadertable{
+    height: 100%;
+    width: 100%;
+}
+
+.menubutton{
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+}
+
+
+.buttonbg{
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    border:none;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+}
+
+.pageTitleImgBG{
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    border:none;
+    right:80px;
+    top: 0px;
+    position: absolute;
+}
+
+.buttonsharebg2{
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    border:none;
+    right:100px;
+    top: 0px;
+    position: absolute;
+}
+
+.pageTitileImg{
+    width: auto;
+    height: 100%;
+    background-color: transparent;
+    position: relative;
+    vertical-align: middle;
+    
+}
+
+.menubutton:active {
+    vertical-align: top;
+    padding: 1px 1px 1px;
+    border: none;
+}
+
+.pagetitle{
+    color: rgba(255, 255, 255, 0.6);
+    width: auto;
+    height: 100%;
+    line-height: 100%;
+    background-color: transparent;
+    border:none;
+    right: 10px;
+    top: 0px;
+    font-size: 13px;
+    position: relative;
+    font-size: 16px;
+    font-family: "Roboto-Thin";
+    text-align:center;
+}
+/* Top Header Style end */
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* submenu Style */
+.submenu{
+    position: absolute;
+	top:6%;
+    background-color:white;
+    text-align:justify;
+    color: #46a19a;
+    height: 6%;
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+.backBtn{
+    background-color: transparent;
+    border:none;
+    vertical-align: middle;
+    height: 100%;
+	width:auto;
+}
+
+/* submenu Style end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* content page Style */
+.content{
+   width: 100%;
+    height: 88%;
+    background-color: white;
+	position:absolute;
+	top:12%;
+    
+}
+
+.pageone{
+   background-color: white;
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0%;
+    display: inline-block;
+    position: absolute;
+    z-index: 3;
+/*    position: absolute;*/
+    
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-transition: transform 400ms ease;
+    -moz-transition: transform 400ms ease;
+    transition: transform 400ms ease;
+}
+
+/* content page stry end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+
+
+
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* listview Style Page 1*/
+.wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    display: block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    bottom: 0%;
+    overflow:auto;
+}
+
+.scrollul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+ 
+.scrollli {
+    padding:0 10px;
+    height:auto;
+    line-height:40px;
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #fff;
+/*    background-color:#fafafa;*/
+    font-size:14px;
+/*    border-bottom: 1px dotted #333;  */
+    border-bottom: none;
+}
+
+.scrollli:hover {
+    background-color: none;
+}
+
+.scroll-content {
+    position:absolute; 
+    z-index:1;
+    width:100%;
+    padding:0;
+}
+
+
+.scrollli h1{
+    font-family: "Roboto-Regular";
+    font-size: 17px;
+    color: #46a19a;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: 30px;
+}
+
+.scrollli h2{
+    font-family: "Roboto-Regular";
+    font-size: 15px;
+    color: #46a19a;
+    margin: 0px 0px 0px 0px;
+    background-color: white;
+    height: 30px;
+}
+
+.scrollli p{
+    background-color: white;
+    margin: 0px 0px 0px 0px;
+}
+
+.pBtn button{
+    background-color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.pBtn button img{
+    width: auto;
+    height: 20px;
+}
+
+#productImg{
+    width: 80%;
+    height: auto;
+}
+
+#galleryImg{
+    width: 60%;
+    height: auto;
+}
+.seperator{
+    border-bottom: 2px dotted #46a19a;
+    margin: 0px 0px 30px 0px;
+}
+
+.description{
+    font-family: "Roboto-Regular";
+    font-size: 12px;
+    text-align: justify;
+    color: #565656;
+    line-height: 20px;
+    margin-top: 30px;
+}
+
+.h2seperator{
+    border-bottom: 1px solid #46a19a;
+    width: 30px;
+    line-height: 10px;
+}
+
+
+/* listview Style Page 1 end*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/
+/* ------------------------------------------------------------------------------------*/

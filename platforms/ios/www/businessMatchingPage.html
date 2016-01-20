@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+<!--        <link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.4.5.css"/>-->
+        <title>Home Page</title>
+        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/businessMatchingPage.js"></script>
+        <script type="text/javascript" src="facebookConnectPlugin.js"></script>
+        <script type="text/javascript" src="js/slidemenu.js"></script>
+        <script type="text/javascript" src="js/filterItem.js"></script>
+        <script type="text/javascript" src="js/webRequest.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.min.js"></script>
+        <script type="text/javascript">
+            $(document).bind('mobileinit',function(){
+                $.mobile.loadingMessage = false;
+            })
+        </script>  
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/businessMatchingPage.css" />
+        <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
+        <link rel="stylesheet" type="text/css" href="css/filterItem.css" />
+        <script type="text/javascript">
+            
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var menuStatus;
+            //bind swipe event with jquery
+            $(function(){
+                $("#pageBody").on("swipeleft", function(){
+                    pageSwipeLeft();
+                });
+                
+                $("#pageBody").on("swiperight", function(){
+                    pageSwipeRight();
+                });
+            });
+            
+            function onDeviceReady() {
+                
+            }
+            
+           
+        </script>
+    </head>
+    <body id="pageBody">
+        <div data-role="app" class="app" id="app">
+            <div class="menuheader">
+                <div class="menuheaderleft">
+                    <button class="buttonbg"><img class="menubutton" src="img/drawer.png"></img></button>
+                </div>
+                <div class="menuheaderright">
+                    <button class="pagetitle">Business Matching</button>
+                    <button class="pageTitileImgBG" id="pageTitileImgBG" onclick=""><img class="pageTitileImg" src="img/business_matching.png"></img></button>
+                    <button class="inboxBtn" onclick="goInbox()"><img class="inboxBtnImg" src="img/message.png"></img></button>
+                </div>
+            </div>
+            <div class="menubg">
+                <div class="searchbox">
+                    <script type="text/javascript" src="js/searchBox.js"></script>
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <ul id="slidemenu">
+                        <script type="text/javascript" src="js/slidemenuitem.js"></script>
+                    </ul>    
+                </div>
+                <div class="menufooter">
+                    <img src="img/menufooter-2.png" class="footerimage"/>
+                </div>
+            </div>
+            <div class="filterFrame">
+                <div class="filterbg">
+                        <div class="wrapperFilter" id="wrapper">
+                            <div class="scroll-contentFilter" id="scroll-content">
+                                <ul class="scrollulFilter" id="scrollul">
+                                    <div class="filterHeader">
+                                        Filter
+                                    </div>
+                                    <div class="closeButtonFrame">
+                                        <button class="closeButton" id="closeBtn"><img clas="closeButtonImg" src="img/filter-arrow.png"/></button>
+                                    </div>
+                                    <div class="filterItem" id="filterItem">
+                                    </div>
+                                </ul>
+                                <br>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="subheaderblack">
+                <div>
+					<div class="subBtn1">
+						<button class="subheaderbutton" onclick="changepage(1);" id="btnProduct">Product</button>
+					</div>
+					<div class="subSeperator1">
+                         <button class="subheaderbutton">|</button>
+                    </div>
+                    <div class="subBtn2">
+                        <button class="subheaderbutton" id="filterBtn">Filter</button>
+                    </div>
+                </div>
+                <div class="subheaderFilter">
+<!--                    <button id="filterBtn" class="filterBtnCls"><img src="img/filter.png" class="filterBtnImg"/></button>-->
+                </div>
+                <div class="selectedItem">
+                </div>
+                
+            </div>
+            <div class="content">
+                <div class="pageone">
+                    <div class="headerSpaceLVM">&nbsp;</div>
+                    <div class="headerLVM"><img style='height:100%;width:1%;' src='img/blacnk.png';/><span>Last View Matches</span></div>
+                    <div class="wrapperLVM" id="wrapper">
+                        <div class="scroll-contentLVM" id="scroll-content">
+                            <ul class="scrollulLVM" id="scrollul">
+<!--
+                                <li class="scrollliLVM">
+                                    <table class="listviewitemframeLVM">
+                                        <tr>
+                                            <td style="width:20%"><img class="listviewimgLVM" src="http://cdn.playbuzz.com/cdn/fdbf1197-18af-43df-a5b1-76d180475700/49081b85-5614-4368-9103-71d9f0651322.jpg">
+                                            </td>
+                                            <td>
+                                                <h1 class="listviewitemtitleLVM">Some Title</h1>
+                                                <p class="listviewitemseperatorLVM">&nbsp;</p>
+                                                <p class="listviewitemdetailsLVM">We developed enterprise level office PABX that cater for everyteleprothy needs.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+-->
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="headerSpaceRM">&nbsp;</div>
+                    <div class="headerRM"><img style='height:100%;width:1%;' src='img/blacnk.png';/><span>Recommended Matches</span></div>
+                    <div class="wrapperRM" id="wrapper">
+                        <div class="scroll-contentRM" id="scroll-content">
+                            <ul class="scrollulRM" id="scrollul">
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="messageDivFrame">
+                <div class="messageDiv">
+                        <label class=replyMessageLbl>New Message</label>
+                        <input class="replyMessageSubject" placeholder="Subject" type="text"></input>
+                        <textarea class="replyMessageInput" placeholder="Enter your content here"></textarea>
+                        <button class="btnClose" onclick="replyOnClick();">Close</button>
+                        <button class="btnSend" onclick="submitReplyMessage();">Send</button>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../plugins/iscroll-master/build/iscroll-lite.js"></script>
+        <script type="text/javascript">
+
+        var theScroll;
+        function scroll() {
+            theScroll = new iScroll('wrapper');
+        }
+        </script>
+        <script type="text/javascript">
+            filterItem.initItemFilter();
+            app.initialize();
+            dbmanager.initdb();
+            $(document).ready(
+                function(){
+                    slideMenu.initSlideMenu();
+                    initsubmenustyle();
+                    initLVMProduct();
+                    initInboxButton();
+                    inboxMessage.checkNewMessageNumber();
+            });
+            
+        </script>
+    </body>
+</html>

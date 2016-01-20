@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+<!--        <link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.4.5.css"/>-->
+        <title>Home Page</title>
+        <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.js"></script>
+        <script type="text/javascript" src="js/jquery/jquery.dotdotdot.min.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/inboxPage.js"></script>
+        <script type="text/javascript" src="facebookConnectPlugin.js"></script>
+        <script type="text/javascript" src="js/slidemenu.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/webRequest.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+        <link rel="stylesheet" type="text/css" href="css/inboxPage.css" />
+        <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
+        <script type="text/javascript">
+            $(document).bind('mobileinit',function(){
+                $.mobile.loadingMessage = false;
+            })
+            
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var menuStatus;
+            //bind swipe event with jquery
+            
+            function onDeviceReady() {                
+            }
+        </script>
+    </head>
+    <body id="pageBody">
+        <hidden id="pageString"></hidden>
+        <div data-role="app" class="app" id="app">
+            <div class="menuheader">
+                <div class="menuheaderleft">
+                    <button class="buttonbg"><img class="menubutton" src="img/drawer.png"></img></button>
+                </div>
+                <div class="menuheaderright">
+                    <button class="pagetitle">My Profile</button>
+                    <button class="pageTitileImgBG" id="pageTitileImgBG" onclick=""><img class="pageTitileImg" src="img/user-2.png"></img></button>
+                </div>
+            </div>
+            <div class="menubg">
+                <div class="searchbox">
+                    <script type="text/javascript" src="js/searchBox.js"></script>
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <ul id="slidemenu">
+                        <script type="text/javascript" src="js/slidemenuitem.js"></script>
+                    </ul>    
+                </div>
+                <div class="menufooter">
+                    <img src="img/menufooter-2.png" class="footerimage"/>
+                </div>
+            </div>
+            <div class="content">
+                <div class="profileDiv">
+                    <div class="profilePicFrame">
+                        <div class="helper"></div>
+                        <img class="profileImg" id="imgProfile" src=""/>
+                    </div>
+                    <label class="username" id="lblUSername"></label>
+                    <img src="" class="profileBG" id="profileBG"></img>
+                    <div class="profileStatistic">
+                        <table class="profileStatisticTable">
+                            <tr style="width:100%;">
+                                <td style="width:33.33%;">
+                                    <label class="statisticNumber" id="lblviewnumber">0</label><br>
+                                    <label class="statisticLbl">Views</label>
+                                </td>
+                                <td style="width:33.33%">
+                                    <label class="statisticNumber" id=lblfavnumber>0</label><br>
+                                    <label class="statisticLbl">Favourites</label>
+                                </td>
+                                <td style="width:33.33%">
+                                    <label class="statisticNumber" id="lblsharenumber">0</label><br>
+                                    <label class="statisticLbl">Shares</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="subheaderblack">
+                        <div>
+                            <table class="subheadertable">
+                                <tr style="width:32.67%:height:100%;">
+                                    <td style="width:49.5%;">
+                                        <button class="subheaderbutton" onclick="goProfilePage('point');" id="btnFeatured">Points</button>
+                                    </td>
+                                    <td style="width:1%">
+                                            &nbsp;|&nbsp;
+                                    </td>
+                                    <td style="width:49.5%">
+                                        <button class="subheaderbutton" onclick="goProfilePage('pns');" id="btnLatestPost">Products & Services</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="pageone">
+                    <div class="wrapper" id="wrapper">
+                        <div class="scroll-content" id="scroll-content">
+                            <ul class="scrollul" id="scrollul">
+<!--
+                                <li class="scrollli" onclick="itemOnClickService();">
+                                    <table style="width:100%;">
+                                        <tr>
+                                            <td rowspan="3" style="width:20%"><img class="inboxImgUnread" src="img/profile_default_new.png">
+                                            </td>
+                                            <td style="width:60%;">
+                                                <p class="inboxUnreadTitle">Some Title</p>
+                                            </td>
+                                            <td style="width:20%;" rowspan="2">
+                                                <p class="inboxUnreadDate">21 Sep</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:60%;">
+                                                <p class="inboxUnreadInfo">More Info</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:60%;">
+                                                 <span class="inboxUnreadMsg">We developed enterprise level office PABX that cater for everyteleprothy needs.</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+-->
+<!--
+                                <li class="scrollliPage2" onclick="itemOnClickService();">
+                                    <table style="width:100%;">
+                                        <tr>
+                                            <td rowspan="3" style="width:20%"><img class="inboxImg" src="http://cdn.playbuzz.com/cdn/fdbf1197-18af-43df-a5b1-76d180475700/49081b85-5614-4368-9103-71d9f0651322.jpg">
+                                            </td>
+                                            <td style="width:60%;">
+                                                <p class="inboxReadTitle">Some Title</p>
+                                            </td>
+                                            <td style="width:20%;">
+                                                <p class="inboxReadDate">July 7</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:60%;">
+                                                <p class="inboxReadInfo">More Info</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width:60%;">
+                                                 <span class="inboxReadMsg">We developed enterprise level office PABX that cater for everyteleprothy needs.</span>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </li>
+-->
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../plugins/iscroll-master/build/iscroll-lite.js"></script>
+ 
+        <script type="text/javascript">
+
+        var theScroll;
+        function scroll() {
+            theScroll = new iScroll('wrapper');
+        }
+        </script>
+        <script type="text/javascript">
+            app.initialize();
+            dbmanager.initdb();
+            $(document).ready(function(){
+                
+                $(".profilePicFrame").width( $(".profilePicFrame").height());
+                var marginleft=$(".app").width()/2 - $(".profilePicFrame").width()/2;
+                $(".profilePicFrame").css("margin-left", marginleft);    
+                $(".profilePicFrame").show();  
+                
+                dbmanager.getProfile(function(returnData){
+                    var roles=returnData.rows.item(0).role;
+                    var rolearr=roles.split(",");
+                    if(jQuery.inArray("7",rolearr)==1 || jQuery.inArray("6",rolearr)==1){    
+                        
+                    }
+                    else{
+                        $(".profilePicFrame").hide();
+                        $("#lblUSername").hide();
+                        $("#profileBG").hide();
+                        $(".profileStatistic").hide();
+                        $(".subheaderblack").hide();
+//                        $(".subheaderblack").css("top", "0%");
+                        $(".pageone").css("height", "100%");
+                    }
+                });
+                
+                slideMenu.initSlideMenu();
+                initUserPoint();
+            });
+        </script>
+    </body>
+</html>

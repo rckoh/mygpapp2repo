@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+<!--        <link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.4.5.css"/>-->
+        <title>Home Page</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/serviceDetailPage.js"></script>
+        <script type="text/javascript" src="facebookConnectPlugin.js"></script>
+        <script type="text/javascript" src="js/jquery-mobile/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+            $(document).bind('mobileinit',function(){
+                $.mobile.loadingMessage = false;
+            })
+        </script>  
+        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.js"></script>
+<!--        <script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.4.5.min.js"></script>-->
+        <link rel="stylesheet" type="text/css" href="css/serviceDetailPage.css" />
+        <link rel="stylesheet" type="text/css" href="css/slidemenu.css" />
+        <script type="text/javascript" src="js/slidemenu.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("deviceready", onDeviceReady, false);
+            var menuStatus;
+            
+            $(function(){
+	
+                $("#pageBody").on("swipeleft", function(){
+                    pageSwipeLeft();
+                });
+            });
+            
+            function onDeviceReady() {
+                
+            }
+        </script>
+        <script type="text/javascript" src="js/slidemenuaction.js"></script>
+        
+    </head>
+    <body id="pageBody">
+        <div data-role="app" class="app" id="app">
+            <div class="menuheader">
+                <table class="menuheadertable">
+                    <tr>
+                        <td>
+                            <button class="buttonbg"><img class="menubutton" src="img/drawer.png"></img></button>
+                        </td>
+                        <td style="text-align:right;">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="menubg">
+                <div class="searchbox">
+                    <script type="text/javascript" src="js/searchBox.js"></script>
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <br>
+                    <ul id="slidemenu">
+                        <script type="text/javascript" src="js/slidemenuitem.js"></script>
+                    </ul>    
+                </div>
+                <div class="menufooter">
+                    <img src="img/menufooter-2.png" class="footerimage"/>
+                </div>
+            </div>
+            <div class="submenu">
+                <button class="backBtn"><img src=img/previous.png class="backBtnImg"/></button>&nbsp;Back to search results
+            </div>
+            <div class="content">
+                <div class="pageone">
+                    <div class="wrapper" id="wrapper">
+                        <div class="scroll-content" id="scroll-content">
+                            <ul class="scrollul" id="scrollul">
+                                <li class="scrollli">
+                                    <h1 id="companyName">Creative Technology Consultancy</h1>
+                                    <p class="pBtn"><button><img src="img/share%20alt.png"/></button>&nbsp;<button><img src="img/fav-alt.png"/></button>&nbsp;</p><br>
+                                    <p><img id="productImg" src="http://cdn.playbuzz.com/cdn/fdbf1197-18af-43df-a5b1-76d180475700/49081b85-5614-4368-9103-71d9f0651322.jpg"/></p>
+                                    <p class="seperator">&nbsp;</p><br>
+                                    <p class="description"> MSC Malaysia eSolutions was first designed to bridge the gap for potential buyrs and sellers to access into a wide range of innovative products and services offered oin the areas of technological industries.<br><br>Todat, the demands and awareness in this industry has grown into a mass needs in keeping up with the latest trend in technology and are alwayson the lookout for new ideas in the market.<br><br>This has expanded the MSC Malaysia products and services listing portal into a centre-stage for buyers, sellers, affiliates and funders to extend the vines of their networks for business oppurtunities, new venture interests and promising business partners.</p>
+                                    <p class="seperator">&nbsp;</p>
+                                    <h2>Customer References</h2>
+                                    <p class="h2seperator">&nbsp;</p>
+                                    <p class="description">MSC Malaysia eSolutions was first designed to bridge the gap for potential buyrs and sellers to access into a wide range of innovative products and services offered oin the areas of technological industries.</p>
+                                    <h2>Brochures</h2>
+                                    <p class="h2seperator">&nbsp;</p>
+                                    <p class="description">N/A</p>
+                                    <h2>Tags</h2>
+                                    <p class="h2seperator">&nbsp;</p>
+                                    <p class="description">N/A</p>
+                                    <h2>Platforms</h2>
+                                    <p class="h2seperator">&nbsp;</p>
+                                    <p class="description">Windows</p>
+                                    <h2>Service Requirement</h2>
+                                    <p class="h2seperator">&nbsp;</p>
+                                    <p class="description">MSC Malaysia eSolutions was first designed to bridge the gap for </p>
+                                    <h2>Market</h2>
+                                    <p class="h2seperator">&nbsp;</p>
+                                    <p class="description">Local and International </p>
+                                    <h2>Service Category</h2>
+                                    <p class="h2seperator">&nbsp;</p>
+                                    <p class="description">MSC Malaysia eSolutions was first designed to bridge the gap for potential buyrs and sellers to access into a wide range of innovative products and services offered oin the area </p>
+                                    <h2>Service Sub Category</h2>
+                                    <p class="h2seperator">&nbsp;</p>
+                                    <p class="description">MSC Malaysia eSolutions was first designed to bridge the gap for potential buyrs and sellers to access into a wide range of innovative products and services offered oin the area </p>
+                                    <p><br><br></p>
+                                </li>
+                            </ul>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <script type="text/javascript" src="../plugins/iscroll-master/build/iscroll-lite.js"></script>
+ 
+        <script type="text/javascript">
+
+        var theScroll;
+        function scroll() {
+            theScroll = new iScroll('wrapper');
+        }
+        </script>
+        <script type="text/javascript">
+            initsubmenustyle();
+            app.initialize();
+        </script>
+    </body>
+</html>

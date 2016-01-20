@@ -1,4 +1,39 @@
 {
+    "de.appplant.cordova.plugin.hidden-statusbar-overlay": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/katzer/cordova-plugin-hidden-statusbar-overlay",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.phonegap.plugins.PushPlugin": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/phonegap-build/PushPlugin.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/apache/cordova-plugin-whitelist",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "nl.x-services.plugins.socialsharing": {
+        "source": {
+            "type": "registry",
+            "id": "nl.x-services.plugins.socialsharing"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
     "com.phonegap.plugins.facebookconnect": {
         "source": {
             "type": "registry",
@@ -6,22 +41,14 @@
         },
         "is_top_level": true,
         "variables": {
-            "APP_ID": "521613448006826",
-            "APP_NAME": "myTed"
+            "APP_ID": "1618299145090032",
+            "APP_NAME": "Projeksistematik"
         }
     },
-    "com.phonegap.plugins.PushPlugin": {
+    "cordova-plugin-inappbrowser": {
         "source": {
             "type": "registry",
-            "id": "com.phonegap.plugins.pushplugin"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "cordova-plugin-whitelist": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-whitelist@1"
+            "id": "cordova-plugin-inappbrowser"
         },
         "is_top_level": true,
         "variables": {}
